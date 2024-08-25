@@ -1,0 +1,77 @@
+import React, { useState, useEffect } from "react";
+import spPic from "./images/sp-pic.png";
+
+const AboutMe = () => {
+  const [text, setText] = useState("");
+  const fullText = "A  lil' bit about me.";
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "#FFFCF9";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      if (index < fullText.length) {
+        setText((prev) => prev + fullText.charAt(index));
+        index++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+    document.body.style.backgroundColor = "";
+  }, []);
+  return (
+    <div className="max-w-4xl mx-auto p-2 font-lora font-serif min-h-screen flex flex-col">
+      <main className="flex-grow flex flex-col md:flex-row justify-between items-center">
+        <div className="md:w-2/3 pr-8 mt-0">
+          <h1 className="text-3xl font-nunito font-bold mb-12 text-center w-full overflow-hidden whitespace-nowrap">
+            {text}
+            <span className="animate-cursor">|</span>
+          </h1>
+          <div className="space-y-6">
+            <p>
+              I'm Sanjana, an ambitious, driven data scientist at MITRE. As an
+              Associate for their Network Analytics Division, I led a research
+              study that built an iOS app to help low vision individuals
+              navigate train stations. As a part of this study, I submitted two
+              journal papers on my research. Currently, I'm working on
+              fine-tuning LLMs to support warfighters with information
+              acquisition and retrieval.
+            </p>
+
+            <p>
+              If there is one quality that sets me apart from most engineers,
+              it's my compassion. I strive to listen, learn and cheer on others.
+              I'm always there to help out and support anyone, especially if
+              they are eager to share their ideas.
+            </p>
+
+            <p>
+              If you're interested in seeing how I can best support you, or want
+              to collaborate, feel free to reach out via{" "}
+              <a
+                href="mailto:sanjanapendharkar01@gmail.com"
+                className="underline"
+              >
+                email
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+
+        <div className="md:w-1/3 mt-8 md:mt-0 flex items-center">
+          <div className="p-1">
+            <img
+              src={spPic}
+              alt="Sanjana Pendharkar"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default AboutMe;

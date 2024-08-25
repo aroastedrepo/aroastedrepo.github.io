@@ -1,0 +1,23 @@
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end);
+}
+
+/* Custom styles for diagonal and horizontal lines */
+.diagonal-line-left {
+  transform: rotate(-45deg);
+}
+
+.diagonal-line-right {
+  transform: rotate(45deg);
+}
