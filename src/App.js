@@ -9,7 +9,7 @@ import {
 import AboutMe from "./AboutMe";
 import ProjectsPage from "./Projects";
 import spLogo from "./images/sp-logo.png";
-import ResumePDF from "./images/Sanjana_Pendharkar_Resume.pdf";
+//import ResumePDF from "./images/Sanjana_Pendharkar_Resume.pdf";
 import JamItMain from "./JamIt.js";
 import TNAMain from "./TNAMain.js";
 
@@ -61,7 +61,7 @@ const AppContent = () => {
             </li>
             <li>
               <a
-                href={ResumePDF}
+                href="/Sanjana_Pendhakar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg font-nunito hover:underline font-light"
