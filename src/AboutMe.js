@@ -30,15 +30,20 @@ const AboutMe = () => {
           </h1>
           <div className="space-y-6">
             <p>
-              I'm Sanjana, an ambitious, driven data scientist at MITRE. As an
-              Associate for their Network Analytics Division, I led a research
-              study that built an iOS app to help low vision individuals
-              navigate train stations. As a part of this study, I submitted two
-              journal papers on my research. Currently, I'm working on
-              fine-tuning LLMs to support warfighters with information
-              acquisition and retrieval.
+              I'm Sanjana, an ambitious, driven data scientist at MITRE.
+              Formerly, I was an Associate for their Network Analytics Division,
+              I led a research study that built an iOS app to help low vision
+              individuals navigate train stations. As a part of this study, I
+              submitted two journal papers on my research. During my tenure
+              here, I also worked on fine-tuning LLMs to support warfighters
+              with information acquisition and retrieval.
             </p>
-
+            <p>
+              Currently, I am back on the job market. I'm looking for a role
+              with high agency, and high impact. I'd like to work on meaningful
+              problems, and develop software that addresses the needs of
+              vulnerable, marginalized communities.
+            </p>
             <p>
               If there is one quality that sets me apart from most engineers,
               it's my compassion. I strive to listen, learn and cheer on others.

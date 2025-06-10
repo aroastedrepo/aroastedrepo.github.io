@@ -10,8 +10,10 @@ import AboutMe from "./AboutMe";
 import ProjectsPage from "./Projects";
 import spLogo from "./images/sp-logo.png";
 import ResumePDF from "./images/Sanjana_Pendharkar_Resume.pdf";
-import JamItMain from "./JamIt.js";
-import TNAMain from "./TNAMain.js";
+import VoiceVerseMain from "./voice-verse.js";
+import SparkleAIMain from "./sparkle-ai.js";
+//import JamItMain from "./JamIt.js";
+//import TNAMain from "./TNAMain.js";
 
 const App = () => {
   return (
@@ -76,8 +78,8 @@ const AppContent = () => {
       <main className="max-w-6xl mx-auto px-8">
         <Routes>
           <Route path="/" element={<AboutMe />} />
-          <Route path="/jam-it" element={<JamItMain />} />
-          <Route path="/together-not-alone" element={<TNAMain />} />
+          <Route path="/voice-verse" element={<VoiceVerseMain />} />
+          <Route path="/sparkle-ai" element={<SparkleAIMain />} />
           <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
       </main>
