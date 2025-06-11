@@ -148,6 +148,16 @@ const SparkleAIMain = () => {
                 </li>
               </ul>
             </p>
+            <p>
+              You can read my app analysis, and curated product insights{" "}
+              <a
+                href="https://docs.google.com/document/d/1EOWA8xj4TGlUT_7PfB5WTxbIjsv4qbXvS04U0r3VxaU/edit?tab=t.0"
+                className="underline decoration-black"
+              >
+                here
+              </a>
+              .
+            </p>
             <p className="font-lora mb-4">
               We decided to tackle both problems in our long term task
               management planning app by providing users with a UX that aligned
