@@ -148,7 +148,7 @@ const SparkleAIMain = () => {
                 </li>
               </ul>
             </p>
-            <p>
+            <p className="font-lora mb-4">
               You can read my app analysis, and curated product insights{" "}
               <a
                 href="https://docs.google.com/document/d/1EOWA8xj4TGlUT_7PfB5WTxbIjsv4qbXvS04U0r3VxaU/edit?tab=t.0"
