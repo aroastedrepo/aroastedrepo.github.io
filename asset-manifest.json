@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4e04e771.css",
-    "main.js": "/static/js/main.f26514ac.js",
+    "main.js": "/static/js/main.416bb093.js",
     "static/js/453.8fb6fbf6.chunk.js": "/static/js/453.8fb6fbf6.chunk.js",
     "static/media/alex_user_profile_vv.png": "/static/media/alex_user_profile_vv.f30664d87cd43dea0201.png",
     "static/media/ariana_user_profile_vv.png": "/static/media/ariana_user_profile_vv.3d86dc442c5f9011dbd9.png",
@@ -23,15 +23,15 @@
     "static/media/intro_screen.png": "/static/media/intro_screen.3a0dc0d52993b9ad32b2.png",
     "static/media/apps_key_problems_spai.png": "/static/media/apps_key_problems_spai.2699d54d73950451faca.png",
     "static/media/user_journey_spai.png": "/static/media/user_journey_spai.27f01f908b9a9f3de0d6.png",
-    "static/media/Sanjana_Pendharkar_Resume.pdf": "/static/media/Sanjana_Pendharkar_Resume.76fcff36bf3dfdca5835.pdf",
     "static/media/sp-pic.png": "/static/media/sp-pic.2d4039657eb08c4228d4.png",
+    "static/media/Sanjana_Pendharkar_Resume.pdf": "/static/media/Sanjana_Pendharkar_Resume.bd2135406f7031e88aeb.pdf",
     "index.html": "/index.html",
     "main.4e04e771.css.map": "/static/css/main.4e04e771.css.map",
-    "main.f26514ac.js.map": "/static/js/main.f26514ac.js.map",
+    "main.416bb093.js.map": "/static/js/main.416bb093.js.map",
     "453.8fb6fbf6.chunk.js.map": "/static/js/453.8fb6fbf6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e04e771.css",
-    "static/js/main.f26514ac.js"
+    "static/js/main.416bb093.js"
   ]
 }
