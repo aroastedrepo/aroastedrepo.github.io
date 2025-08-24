@@ -1,6 +1,4 @@
 import React from "react";
-import originalVoiceVerse from "./images/original_voice_verse.png";
-import basicSection from "./images/basic section.png";
 import alexUserProfile from "./images/alex_user_profile_vv.png";
 import arianaUserProfile from "./images/ariana_user_profile_vv.png";
 import mindMap from "./images/mind_map_vv.png";

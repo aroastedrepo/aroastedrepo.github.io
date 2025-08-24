@@ -1,13 +1,7 @@
 import React from "react";
-import introScreen from "./images/intro_screen.png";
+
 import aliyaUserProfile from "./images/aliya_user_profile_spai.png";
 import ericUserProfile from "./images/eric_user_profile_spai.png";
-import taskDumpWeekly from "./images/task_dump_weekly.png";
-import rewardsTransitions from "./images/rewards_transitions.png";
-import createSaveRunTasks from "./images/create_save_run_tasks.png";
-import longTermProjects from "./images/long_term_projects.png";
-import routineManagerCalendar from "./images/routine_manager_calendar.png";
-import taskDumpMonthly from "./images/task_dump_monthly.png";
 import appsKeyProblems from "./images/apps_key_problems_spai.png";
 import userJourney from "./images/user_journey_spai.png";
 import calendarView from "./images/go_sparkle/calendar_view.png";
