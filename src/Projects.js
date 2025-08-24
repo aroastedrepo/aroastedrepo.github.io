@@ -4,7 +4,7 @@ import React from "react";
 //import JamItMain from "./JamIt.js";
 import VoiceVerseMain from "./voice-verse.js";
 import voiceVerseLogo from "./images/voice_verse_logo_1.png";
-import sparkleAILogo from "./images/sparkle_ai_logo.png";
+import sparkleAILogo from "./images/go_sparkle_logo.png";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ title, description, imageSrc }) => {
@@ -47,10 +47,10 @@ const ProjectsPage = () => {
       link: "/voice-verse",
     },
     {
-      title: "Sparkle AI",
+      title: "Go Sparkle",
       description: "AI Productivity & Long Term Planning Coach",
       imageSrc: sparkleAILogo,
-      link: "/sparkle-ai",
+      link: "/go-sparkle",
     },
 
     /*

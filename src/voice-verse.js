@@ -1,11 +1,15 @@
 import React from "react";
 import originalVoiceVerse from "./images/original_voice_verse.png";
-import advancedSection from "./images/advanced_section.png";
 import basicSection from "./images/basic section.png";
 import alexUserProfile from "./images/alex_user_profile_vv.png";
 import arianaUserProfile from "./images/ariana_user_profile_vv.png";
 import mindMap from "./images/mind_map_vv.png";
 import problemsSolutionsBoard from "./images/problems_solutions_board.png";
+import advancedEssayOutline from "./images/voice_verse/advanced_essay_outline.png";
+import citation from "./images/voice_verse/citation.png";
+import feedback from "./images/voice_verse/feedback.png";
+import helpBar from "./images/voice_verse/help_bar.png";
+import mindMapNew from "./images/voice_verse/mind_map.png";
 
 const VoiceVerseMain = () => {
   return (
@@ -43,7 +47,7 @@ const VoiceVerseMain = () => {
               <div className="rounded-lg overflow-hidden">
                 <img
                   src={alexUserProfile}
-                  alt="Alex User Profile"
+                  alt="User profile showing Alex, a neurodivergent student using Voice Verse for writing assistance"
                   className="w-full h-64 object-contain"
                 />
                 <p className="text-sm text-gray-600 mt-2 text-center italic">
@@ -53,7 +57,7 @@ const VoiceVerseMain = () => {
               <div className="rounded-lg overflow-hidden">
                 <img
                   src={arianaUserProfile}
-                  alt="Ariana User Profile"
+                  alt="User profile showing Ariana, a neurodivergent student benefiting from Voice Verse's writing support"
                   className="w-full h-64 object-contain"
                 />
                 <p className="text-sm text-gray-600 mt-2 text-center italic">
@@ -103,7 +107,7 @@ const VoiceVerseMain = () => {
             <div className="rounded-lg overflow-hidden">
               <img
                 src={mindMap}
-                alt="Voice Verse Mind Map"
+                alt="Interactive mind map interface showing how Voice Verse helps students organize their thoughts visually before writing"
                 className="w-full h-64 object-contain"
               />
             </div>
@@ -178,7 +182,7 @@ const VoiceVerseMain = () => {
             <div className="rounded-lg overflow-hidden">
               <img
                 src={problemsSolutionsBoard}
-                alt="Problems and Solutions Board"
+                alt="Problem-solution analysis board displaying challenges neurodivergent students face with writing and Voice Verse's solutions"
                 className="w-full h-64 object-contain"
               />
             </div>
@@ -300,38 +304,43 @@ const VoiceVerseMain = () => {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-4 font-nunito text-center">
-            Voice Verse Interface Gallery
+            Voice Verse Gallery
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8 mb-16 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center">
+          {/* First 4 images in rows of 2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mt-8 mb-16">
+            <img
+              src={advancedEssayOutline}
+              alt="Voice Verse advanced essay outline feature showing structured writing prompts and organization tools"
+              className="w-full md:w-96 h-auto object-cover mx-auto max-w-lg"
+            />
+
+            <img
+              src={citation}
+              alt="Voice Verse citation management tool helping students properly format and organize their sources"
+              className="w-full md:w-96 h-auto object-cover mx-auto max-w-lg"
+            />
+
+            <img
+              src={feedback}
+              alt="Voice Verse interactive feedback system providing real-time writing guidance and suggestions to students"
+              className="w-full md:w-96 h-auto object-cover mx-auto max-w-lg"
+            />
+
+            <img
+              src={helpBar}
+              alt="Voice Verse contextual help sidebar offering writing tips and assistance based on current student activity"
+              className="w-full md:w-96 h-auto object-cover mx-auto max-w-lg"
+            />
+          </div>
+
+          {/* Last image centered */}
+          <div className="flex justify-center gap-12 md:gap-24 mb-16">
+            <div className="w-full md:w-1/3 max-w-lg">
               <img
-                src={originalVoiceVerse}
-                alt="Original Voice Verse Design"
-                className="w-full md:w-80 h-106 object-contain"
+                src={mindMapNew}
+                alt="Voice Verse mind mapping interface allowing students to brainstorm and connect ideas before writing"
+                className="w-full md:w-96 h-auto object-cover mx-auto"
               />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Initial design mockup showing the Voice Verse interface
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={basicSection}
-                alt="Voice Verse Basic Section Interface"
-                className="w-full md:w-80 h-106 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                The basic section provides structured writing prompts
-              </p>
-            </div>
-            <div className="flex flex-col items-center md:col-span-2 mx-auto mt-6">
-              <img
-                src={advancedSection}
-                alt="Voice Verse Advanced Section Interface"
-                className="w-full md:w-80 h-106 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                The advanced section with interactive feedback
-              </p>
             </div>
           </div>
         </div>

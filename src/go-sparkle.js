@@ -10,18 +10,26 @@ import routineManagerCalendar from "./images/routine_manager_calendar.png";
 import taskDumpMonthly from "./images/task_dump_monthly.png";
 import appsKeyProblems from "./images/apps_key_problems_spai.png";
 import userJourney from "./images/user_journey_spai.png";
+import calendarView from "./images/go_sparkle/calendar_view.png";
+import createNewTask from "./images/go_sparkle/create_new_task.png";
+import lockIn from "./images/go_sparkle/lock_in.png";
+import loginUi from "./images/go_sparkle/login-ui.png";
+import longTermProjectsNew from "./images/go_sparkle/long_term_projects.png";
+import monthlyBreakdown from "./images/go_sparkle/monthly_breakdown.png";
+import transitionRoutines from "./images/go_sparkle/transition_routines.png";
+import weeklyBreakdownForMonth from "./images/go_sparkle/weekly_breakdown_for_month.png";
 
 const SparkleAIMain = () => {
   return (
     <div className="max-w-4xl mx-auto p-4 font-sans">
       <main>
         <h1 className="text-2xl font-bold mb-4 font-nunito p-4 max-w-lg mx-auto">
-          Sparkle AI is an AI long term planning and productivity companion for
+          Go Sparkle is an AI long term planning and productivity companion for
           neurodivergent adults.
         </h1>
         <hr className="my-6 border-gray-300" />
         <p className="text-l mb-4 font-lora p-4 max-w-lg mx-auto">
-          Sparkle AI emerged from a lasting set of conversations I had with an
+          Go Sparkle emerged from a lasting set of conversations I had with an
           ADHD coach, who was discussing the unique challenges her clients
           faced. These conversations revealed a gap in existing tools—nothing
           specifically addressed the intersection of neurodivergent thinking
@@ -40,7 +48,7 @@ const SparkleAIMain = () => {
               <div className="rounded-lg overflow-hidden">
                 <img
                   src={aliyaUserProfile}
-                  alt="Aliya User Profile"
+                  alt="User persona profile for Aliya, a neurodivergent adult who uses Go Sparkle for long-term planning and productivity management"
                   className="w-full h-96 object-contain"
                 />
                 <p className="text-sm text-gray-600 mt-3 text-center italic">
@@ -50,7 +58,7 @@ const SparkleAIMain = () => {
               <div className="rounded-lg overflow-hidden">
                 <img
                   src={ericUserProfile}
-                  alt="Eric User Profile"
+                  alt="User persona profile for Eric, a neurodivergent adult who benefits from Go Sparkle's AI-powered productivity coaching"
                   className="w-full h-96 object-contain"
                 />
                 <p className="text-sm text-gray-600 mt-3 text-center italic">
@@ -105,7 +113,7 @@ const SparkleAIMain = () => {
             <div className="rounded-lg overflow-hidden">
               <img
                 src={appsKeyProblems}
-                alt="Competitive Analysis of ADHD Apps"
+                alt="Competitive analysis chart showing key problems with existing ADHD and productivity apps that Go Sparkle addresses"
                 className="w-full h-96 object-contain"
               />
             </div>
@@ -172,7 +180,7 @@ const SparkleAIMain = () => {
             <div className="rounded-lg overflow-hidden">
               <img
                 src={userJourney}
-                alt="User Journey Map for ADHD Users"
+                alt="User journey map illustrating how neurodivergent adults interact with Go Sparkle throughout their daily planning and productivity workflow"
                 className="w-full h-96 object-contain"
               />
             </div>
@@ -321,78 +329,63 @@ const SparkleAIMain = () => {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-4 font-nunito text-center">
-            Sparkle AI Interface Gallery
+            Go Sparkle Gallery
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 mb-16">
-            <div className="flex flex-col items-center">
+          {/* First 6 images in rows of 3 */}
+          <div className="grid grid-cols-3 gap-8 mt-8 mb-8">
+            <img
+              src={loginUi}
+              alt="Go Sparkle login interface showing clean, accessible design for user authentication"
+              className="w-3/4 h-auto object-cover mx-auto"
+            />
+
+            <img
+              src={calendarView}
+              alt="Go Sparkle calendar interface displaying scheduled tasks, deadlines, and long-term project milestones"
+              className="w-3/4 h-auto object-cover mx-auto"
+            />
+
+            <img
+              src={createNewTask}
+              alt="Go Sparkle task creation interface with AI-powered suggestions for breaking down complex projects"
+              className="w-3/4 h-auto object-cover mx-auto"
+            />
+
+            <img
+              src={monthlyBreakdown}
+              alt="Go Sparkle monthly planning view showing task distribution and progress tracking across weeks"
+              className="w-3/4 h-auto object-cover mx-auto"
+            />
+
+            <img
+              src={weeklyBreakdownForMonth}
+              alt="Go Sparkle weekly breakdown interface showing detailed daily task allocation and time management"
+              className="w-3/4 h-auto object-cover mx-auto"
+            />
+
+            <img
+              src={longTermProjectsNew}
+              alt="Go Sparkle long-term project management dashboard with milestone tracking and progress visualization"
+              className="w-3/4 h-auto object-cover mx-auto"
+            />
+          </div>
+
+          {/* Last 2 images centered */}
+          <div className="flex justify-center gap-8 mb-16">
+            <div className="w-1/3">
               <img
-                src={introScreen}
-                alt="Introduction Screen"
-                className="w-full h-96 object-contain"
+                src={transitionRoutines}
+                alt="Go Sparkle transition routine feature helping users manage task switching and maintain focus"
+                className="w-3/4 h-auto object-cover mx-auto"
               />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Introduction screen with welcoming interface
-              </p>
             </div>
-            <div className="flex flex-col items-center">
+
+            <div className="w-1/3">
               <img
-                src={createSaveRunTasks}
-                alt="Create, Save and Run Tasks"
-                className="w-full h-96 object-contain"
+                src={lockIn}
+                alt="Go Sparkle lock-in feature providing distraction-free focus mode for deep work sessions"
+                className="w-3/4 h-auto object-cover mx-auto"
               />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Create, save, and run task interface
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={longTermProjects}
-                alt="Long Term Projects View"
-                className="w-full h-96 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Long-term projects planning view
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={rewardsTransitions}
-                alt="Rewards and Transitions"
-                className="w-full h-96 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Rewards and transitions interface
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={routineManagerCalendar}
-                alt="Routine Manager Calendar"
-                className="w-full h-96 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Routine manager calendar view
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={taskDumpMonthly}
-                alt="Monthly Task Dump View"
-                className="w-full h-96 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Monthly task organization view
-              </p>
-            </div>
-            <div className="flex flex-col items-center lg:col-start-2 md:col-span-2 lg:col-span-1">
-              <img
-                src={taskDumpWeekly}
-                alt="Weekly Task Dump View"
-                className="w-full h-96 object-contain"
-              />
-              <p className="text-sm text-gray-600 mt-3 text-center italic">
-                Weekly task organization view
-              </p>
             </div>
           </div>
         </div>

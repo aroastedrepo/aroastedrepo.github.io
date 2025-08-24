@@ -11,7 +11,8 @@ import ProjectsPage from "./Projects";
 import spLogo from "./images/sp-logo.png";
 import ResumePDF from "./images/Sanjana_Pendharkar_Resume.pdf";
 import VoiceVerseMain from "./voice-verse.js";
-import SparkleAIMain from "./sparkle-ai.js";
+import SparkleAIMain from "./go-sparkle.js";
+import ScrollToTop from "./ScrollToTop";
 //import JamItMain from "./JamIt.js";
 //import TNAMain from "./TNAMain.js";
 
@@ -27,6 +28,7 @@ const AppContent = () => {
   const location = useLocation();
   return (
     <div className="font-merriweather bg-[#FFFCF9] min-h-screen">
+      <ScrollToTop />
       <header className="max-w-6xl mx-auto pt-8 pb-0 px-8 flex justify-between items-center">
         <Link to="/">
           <img
@@ -79,7 +81,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/voice-verse" element={<VoiceVerseMain />} />
-          <Route path="/sparkle-ai" element={<SparkleAIMain />} />
+          <Route path="/go-sparkle" element={<SparkleAIMain />} />
           <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
       </main>
