@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ad5e52fe.css",
-    "main.js": "/static/js/main.26c20ebe.js",
+    "main.js": "/static/js/main.799edffa.js",
     "static/js/453.8fb6fbf6.chunk.js": "/static/js/453.8fb6fbf6.chunk.js",
     "static/media/alex_user_profile_vv.png": "/static/media/alex_user_profile_vv.f30664d87cd43dea0201.png",
     "static/media/ariana_user_profile_vv.png": "/static/media/ariana_user_profile_vv.3d86dc442c5f9011dbd9.png",
@@ -23,18 +23,17 @@
     "static/media/transition_routines.png": "/static/media/transition_routines.9a90b4e7ab89f947519a.png",
     "static/media/sp-pic.png": "/static/media/sp-pic.2d4039657eb08c4228d4.png",
     "static/media/long_term_projects.png": "/static/media/long_term_projects.72cac8c31f70ba6a2baa.png",
-    "static/media/Sanjana_Pendharkar_Resume.pdf": "/static/media/Sanjana_Pendharkar_Resume.bd2135406f7031e88aeb.pdf",
     "static/media/calendar_view.png": "/static/media/calendar_view.a7476603ece82dd73322.png",
     "static/media/create_new_task.png": "/static/media/create_new_task.d9460826156c415f613a.png",
     "static/media/lock_in.png": "/static/media/lock_in.0ea45a4cc6d6fc214345.png",
     "static/media/login-ui.png": "/static/media/login-ui.3df0b25783a1019d68d3.png",
     "index.html": "/index.html",
     "main.ad5e52fe.css.map": "/static/css/main.ad5e52fe.css.map",
-    "main.26c20ebe.js.map": "/static/js/main.26c20ebe.js.map",
+    "main.799edffa.js.map": "/static/js/main.799edffa.js.map",
     "453.8fb6fbf6.chunk.js.map": "/static/js/453.8fb6fbf6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad5e52fe.css",
-    "static/js/main.26c20ebe.js"
+    "static/js/main.799edffa.js"
   ]
 }
