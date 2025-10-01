@@ -9,7 +9,6 @@ import {
 import AboutMe from "./AboutMe";
 import ProjectsPage from "./Projects";
 import spLogo from "./images/sp-logo.png";
-import ResumePDF from "./images/Sanjana_Pendharkar_Resume.pdf";
 import VoiceVerseMain from "./voice-verse.js";
 import SparkleAIMain from "./go-sparkle.js";
 import ScrollToTop from "./ScrollToTop";
@@ -62,16 +61,6 @@ const AppContent = () => {
               >
                 Projects
               </Link>
-            </li>
-            <li>
-              <a
-                href={ResumePDF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg font-nunito hover:underline font-light"
-              >
-                Resumé
-              </a>
             </li>
           </ul>
         </nav>

@@ -40,10 +40,9 @@ const AboutMe = () => {
               </a>
               's Network Analytics Division, where I led a research study that
               built an iOS app to help low vision individuals navigate train
-              stations. As a part of this study, I submitted two journal papers
-              on my research. During my tenure here, I also worked on
-              fine-tuning LLMs to support warfighters with information
-              acquisition and retrieval.
+              stations. As a part of this study, I submitted journal papers on
+              my research. During my tenure here, I also worked on fine-tuning
+              LLMs to support warfighters.
             </p>
             <p>
               Currently, I am back on the job market. I'm looking for a role
