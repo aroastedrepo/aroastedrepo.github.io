@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.764856b2.css",
-    "main.js": "/static/js/main.790fbd68.js",
+    "main.css": "/static/css/main.87e8a653.css",
+    "main.js": "/static/js/main.966d3bfa.js",
     "static/js/453.8fb6fbf6.chunk.js": "/static/js/453.8fb6fbf6.chunk.js",
     "static/media/alex_user_profile_vv.png": "/static/media/alex_user_profile_vv.d42f54ef808e59cbc40d.png",
     "static/media/ariana_user_profile_vv.png": "/static/media/ariana_user_profile_vv.fdc483a2909083a0d093.png",
-    "static/media/go_sparkle_logo.png": "/static/media/go_sparkle_logo.174f4e3811fc3337c9d9.png",
-    "static/media/voice_verse_logo_1.png": "/static/media/voice_verse_logo_1.a175979ff510a7a59f3d.png",
     "static/media/eric_user_profile_spai.png": "/static/media/eric_user_profile_spai.82241c47f7f349ff2b13.png",
     "static/media/aliya_user_profile_spai.png": "/static/media/aliya_user_profile_spai.9d1c24c6bc537b920c74.png",
     "static/media/problems_solutions_board.png": "/static/media/problems_solutions_board.09f4e3798c42e4e46c5c.png",
@@ -29,12 +27,12 @@
     "static/media/gs_login_peach.png": "/static/media/gs_login_peach.17765bcb0574791ee312.png",
     "static/media/vv_google_scholar_fillins.webp": "/static/media/vv_google_scholar_fillins.f600720b9cc21497311c.webp",
     "index.html": "/index.html",
-    "main.764856b2.css.map": "/static/css/main.764856b2.css.map",
-    "main.790fbd68.js.map": "/static/js/main.790fbd68.js.map",
+    "main.87e8a653.css.map": "/static/css/main.87e8a653.css.map",
+    "main.966d3bfa.js.map": "/static/js/main.966d3bfa.js.map",
     "453.8fb6fbf6.chunk.js.map": "/static/js/453.8fb6fbf6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.764856b2.css",
-    "static/js/main.790fbd68.js"
+    "static/css/main.87e8a653.css",
+    "static/js/main.966d3bfa.js"
   ]
 }
