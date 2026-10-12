@@ -27,3 +27,10 @@ body {
   padding: 0;
   background-color: #fffcf9;
 }
+
+/* Full-bleed bands use 100vw, which includes the scrollbar; clip the overflow
+   without creating a scroll container (keeps position: sticky working). */
+html,
+body {
+  overflow-x: clip;
+}

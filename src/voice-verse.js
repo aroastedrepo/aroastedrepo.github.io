@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import alexUserProfile from "./images/alex_user_profile_vv.png";
 import arianaUserProfile from "./images/ariana_user_profile_vv.png";
 import mindMap from "./images/mind_map_vv.png";
@@ -8,6 +8,20 @@ import vvEssayTopicAddition from "./images/voice_verse/vv_essay_topic_addition.p
 import vvConversationalAi from "./images/voice_verse/vv_conversational_ai.png";
 import vvFactualSpaceshipGame from "./images/voice_verse/vv_factual_spaceship_game.png";
 import vvGoogleScholarFillins from "./images/voice_verse/vv_google_scholar_fillins.webp";
+
+const V1_URL = "https://voice-verse-v1.web.app/";
+const V2_URL = "https://voice-verse-v2.web.app/";
+
+// Faint star field used behind the dark bands, echoing the app's background.
+const starfield = {
+  backgroundImage:
+    "radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.7), transparent)," +
+    "radial-gradient(1px 1px at 78% 14%, rgba(255,255,255,0.5), transparent)," +
+    "radial-gradient(1.5px 1.5px at 42% 68%, rgba(255,255,255,0.6), transparent)," +
+    "radial-gradient(1px 1px at 88% 76%, rgba(255,255,255,0.5), transparent)," +
+    "radial-gradient(1px 1px at 25% 88%, rgba(255,255,255,0.4), transparent)," +
+    "radial-gradient(1.5px 1.5px at 62% 38%, rgba(255,255,255,0.5), transparent)",
+};
 
 const gallerySlides = [
   {
@@ -37,6 +51,142 @@ const gallerySlides = [
   },
 ];
 
+const facts = [
+  { label: "Role", value: "Sole designer & developer" },
+  { label: "Users", value: "High schoolers (14–18) with ADHD" },
+  { label: "Partners", value: "Two special education teachers" },
+  { label: "Status", value: "Beta testing in NJ & VA" },
+];
+
+const FullBleed = ({ className = "", style, children }) => (
+  <section
+    className={`relative left-1/2 w-screen -translate-x-1/2 ${className}`}
+    style={style}
+  >
+    {children}
+  </section>
+);
+
+const Eyebrow = ({ number, label, dark = false }) => (
+  <p
+    className={`font-nunito text-xs font-bold tracking-[0.2em] uppercase mb-3 ${
+      dark ? "text-vv-cyan" : "text-vv-link"
+    }`}
+  >
+    {number} — {label}
+  </p>
+);
+
+const SectionHeading = ({ children }) => (
+  <h2 className="text-3xl font-bold font-nunito text-vv-space mb-5">
+    {children}
+  </h2>
+);
+
+const TextLink = ({ href, children }) => (
+  <a
+    href={href}
+    className="text-vv-link underline decoration-vv-cyan decoration-2 underline-offset-2 hover:decoration-vv-link"
+  >
+    {children}
+  </a>
+);
+
+const ButtonLink = ({ href, children, primary = false }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    className={`inline-block font-nunito font-bold text-sm tracking-wide px-5 py-3 rounded-lg transition-colors ${
+      primary
+        ? "bg-vv-cyan text-vv-space hover:bg-white"
+        : "border-2 border-vv-cyan text-vv-cyan hover:bg-vv-cyan hover:text-vv-space"
+    }`}
+  >
+    {children}
+  </a>
+);
+
+// Image that opens full-size in an overlay, so the diagrams' small text is readable.
+const ZoomableImage = ({ src, alt, caption }) => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  return (
+    <figure>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="group block w-full rounded-xl overflow-hidden shadow-md ring-1 ring-black/5 cursor-zoom-in"
+        aria-label={`Enlarge: ${alt}`}
+      >
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
+        />
+      </button>
+      {caption && (
+        <figcaption className="text-sm text-gray-600 mt-3 text-center font-nunito">
+          {caption} <span className="text-gray-400">· click to enlarge</span>
+        </figcaption>
+      )}
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-vv-space/90 p-4 cursor-zoom-out"
+          onClick={() => setOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={alt}
+        >
+          <img
+            src={src}
+            alt={alt}
+            className="max-h-full max-w-full rounded-lg shadow-2xl"
+          />
+          <button
+            type="button"
+            className="absolute top-4 right-4 text-white text-3xl leading-none px-3"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+      )}
+    </figure>
+  );
+};
+
+const Quote = ({ children, tone }) => (
+  <blockquote
+    className={`bg-white rounded-lg border-l-4 shadow-sm px-5 py-4 mb-4 ${
+      tone === "before" ? "border-vv-orange" : "border-vv-green"
+    }`}
+  >
+    <p className="font-lora italic text-gray-800">{children}</p>
+    <footer className="font-nunito text-sm text-gray-500 mt-2">
+      — High school English teacher
+    </footer>
+  </blockquote>
+);
+
+const FeedbackLabel = ({ tone, children }) => (
+  <p className="font-nunito text-xs font-bold tracking-[0.15em] uppercase text-gray-500 mb-3 flex items-center gap-2">
+    <span
+      className={`inline-block w-2.5 h-2.5 rounded-full ${
+        tone === "before" ? "bg-vv-orange" : "bg-vv-green"
+      }`}
+    />
+    {children}
+  </p>
+);
+
 const GallerySlider = ({ slides }) => {
   const [index, setIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
@@ -45,7 +195,7 @@ const GallerySlider = ({ slides }) => {
 
   return (
     <div
-      className="max-w-lg mx-auto"
+      className="max-w-lg mx-auto focus:outline-none"
       onKeyDown={(e) => {
         if (e.key === "ArrowLeft") goTo(index - 1);
         if (e.key === "ArrowRight") goTo(index + 1);
@@ -55,7 +205,7 @@ const GallerySlider = ({ slides }) => {
       aria-label="Voice Verse gallery"
     >
       <div
-        className="overflow-hidden rounded-lg"
+        className="overflow-hidden rounded-xl ring-1 ring-vv-line bg-vv-space"
         onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
         onTouchEnd={(e) => {
           if (touchStartX === null) return;
@@ -70,7 +220,7 @@ const GallerySlider = ({ slides }) => {
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {slides.map((slide, i) => (
-            <figure
+            <div
               key={slide.src}
               className="w-full flex-shrink-0"
               aria-hidden={i !== index}
@@ -78,22 +228,29 @@ const GallerySlider = ({ slides }) => {
               <img
                 src={slide.src}
                 alt={slide.alt}
-                className="w-full h-96 md:h-[28rem] object-contain"
+                className="w-full h-96 md:h-[30rem] object-contain"
               />
-              <figcaption className="text-sm text-gray-600 mt-2 text-center italic px-4">
-                {i + 1}/{slides.length} · {slide.caption}
-              </figcaption>
-            </figure>
+            </div>
           ))}
         </div>
       </div>
 
-      <div className="flex items-center justify-between mt-4">
+      <p
+        className="text-sm text-slate-300 mt-4 text-center font-nunito min-h-[2.5rem] px-4"
+        aria-live="polite"
+      >
+        <span className="text-vv-cyan font-bold">
+          {index + 1}/{slides.length}
+        </span>{" "}
+        · {slides[index].caption}
+      </p>
+
+      <div className="flex items-center justify-between mt-2">
         <button
           type="button"
           onClick={() => goTo(index - 1)}
           disabled={index === 0}
-          className="px-3 py-1 text-xl rounded-full hover:bg-gray-200 disabled:opacity-30 disabled:hover:bg-transparent"
+          className="px-3 py-1 text-xl text-white rounded-full hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent"
           aria-label="Previous image"
         >
           ←
@@ -105,14 +262,14 @@ const GallerySlider = ({ slides }) => {
           step={1}
           value={index}
           onChange={(e) => goTo(Number(e.target.value))}
-          className="flex-1 mx-4 accent-black cursor-pointer"
+          className="flex-1 mx-4 accent-vv-cyan cursor-pointer"
           aria-label="Gallery slide"
         />
         <button
           type="button"
           onClick={() => goTo(index + 1)}
           disabled={index === last}
-          className="px-3 py-1 text-xl rounded-full hover:bg-gray-200 disabled:opacity-30 disabled:hover:bg-transparent"
+          className="px-3 py-1 text-xl text-white rounded-full hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent"
           aria-label="Next image"
         >
           →
@@ -124,131 +281,148 @@ const GallerySlider = ({ slides }) => {
 
 const VoiceVerseMain = () => {
   return (
-    <div className="max-w-4xl mx-auto p-4 font-sans">
-      <main>
-        <h1 className="text-2xl font-bold mb-4 font-nunito p-4 max-w-lg mx-auto">
-          Voice Verse is a Conversational AI that helps neurodivergent students
-          to write better.
-        </h1>
-        <hr className="my-6 border-gray-300" />
-        <p className="text-l mb-4 font-lora p-4 max-w-lg mx-auto">
-          Voice Verse was born from my lived experiences as an English tutor for
-          neurodivergent students. One of my students continuously expressed how
-          tough it was to translate his thoughts into written words on paper –
-          the process of structuring them into coherent sentences was a major
-          challenge. We played around with several speech to text tools, but
-          couldn't find one that scaffolded him through the essay writing
-          process.
-        </p>
-        <p className="text-l mb-4 font-lora p-4 max-w-lg mx-auto">
-          Upon realizing that this was a common need for neurodivergent
-          students, especially those with ADHD, I started reading papers in this
-          space, cold emailed 50+ high school special education teachers, and,
-          with their feedback, drafted a product requirements doc outlining
-          feature details. This outreach led to securing long-term partnerships
-          with two dedicated teachers who provided invaluable insights
-          throughout the design and development process, even volunteering to
-          run beta tests with their students.
-        </p>
-        <hr className="my-6 border-gray-300" />
-
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-12">
-          <div className="w-full md:w-1/2">
-            <div className="flex flex-col space-y-4">
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src={alexUserProfile}
-                  alt="User profile showing Alex, a neurodivergent student using Voice Verse for writing assistance"
-                  className="w-full h-64 object-contain"
-                />
-                <p className="text-sm text-gray-600 mt-2 text-center italic">
-                  Alex's profile - high school student with ADHD
-                </p>
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src={arianaUserProfile}
-                  alt="User profile showing Ariana, a neurodivergent student benefiting from Voice Verse's writing support"
-                  className="w-full h-64 object-contain"
-                />
-                <p className="text-sm text-gray-600 mt-2 text-center italic">
-                  Ariana's profile - student with writing anxiety
-                </p>
-              </div>
+    <div className="font-lora text-gray-800 pb-0">
+      {/* Hero */}
+      <FullBleed className="bg-vv-space text-white mt-8" style={starfield}>
+        <div className="max-w-[68rem] mx-auto px-8 py-16 md:py-20 grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
+          <div>
+            <Eyebrow number="Case study" label="Conversational AI" dark />
+            <h1 className="font-pixel text-vv-cyan text-3xl md:text-4xl leading-tight mb-6">
+              Voice Verse
+            </h1>
+            <p className="font-nunito text-xl md:text-2xl leading-snug text-slate-100 mb-8">
+              A conversational AI that helps neurodivergent students write
+              better, one guided question at a time.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink href={V2_URL} primary>
+                Try the latest version
+              </ButtonLink>
+              <ButtonLink href={V1_URL}>Try v1</ButtonLink>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex flex-col justify-start">
-            <h2 className="text-2xl font-bold mb-4 font-nunito">
-              User Research & Target Audience
-            </h2>
-            <p className="mb-4 font-lora">
+          <img
+            src={vvLogin}
+            alt="Voice Verse login screen with a pixel-art astronaut"
+            className="w-full max-w-sm mx-auto rounded-xl ring-1 ring-vv-line shadow-[0_0_60px_rgba(97,210,250,0.15)]"
+          />
+        </div>
+        <div className="border-t border-vv-line bg-vv-panel/80">
+          <dl className="max-w-[68rem] mx-auto px-8 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {facts.map((fact) => (
+              <div key={fact.label}>
+                <dt className="font-nunito text-xs font-bold tracking-[0.2em] uppercase text-vv-cyan mb-1">
+                  {fact.label}
+                </dt>
+                <dd className="font-nunito text-sm text-slate-200">
+                  {fact.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </FullBleed>
+
+      <div className="max-w-5xl mx-auto py-16 space-y-20">
+        {/* Background */}
+        <section className="max-w-3xl">
+          <Eyebrow number="01" label="Background" />
+          <SectionHeading>Why I built it</SectionHeading>
+          <p className="mb-4 leading-relaxed">
+            Voice Verse was born from my lived experiences as an English tutor
+            for neurodivergent students. One of my students continuously
+            expressed how tough it was to translate his thoughts into written
+            words on paper – the process of structuring them into coherent
+            sentences was a major challenge. We played around with several
+            speech to text tools, but couldn't find one that scaffolded him
+            through the essay writing process.
+          </p>
+          <p className="leading-relaxed">
+            Upon realizing that this was a common need for neurodivergent
+            students, especially those with ADHD, I started reading papers in
+            this space, cold emailed 50+ high school special education teachers,
+            and, with their feedback, drafted a product requirements doc
+            outlining feature details. This outreach led to securing long-term
+            partnerships with two dedicated teachers who provided invaluable
+            insights throughout the design and development process, even
+            volunteering to run beta tests with their students.
+          </p>
+        </section>
+
+        {/* Research */}
+        <section className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="space-y-8">
+            <ZoomableImage
+              src={alexUserProfile}
+              alt="User profile showing Alex, a high school student with ADHD"
+              caption="Alex — high school student with ADHD"
+            />
+            <ZoomableImage
+              src={arianaUserProfile}
+              alt="User profile showing Ariana, a high school student with writing anxiety"
+              caption="Ariana — student with writing anxiety"
+            />
+          </div>
+          <div>
+            <Eyebrow number="02" label="Research" />
+            <SectionHeading>User Research & Target Audience</SectionHeading>
+            <p className="mb-4 leading-relaxed">
               Prior to starting the design process, it was crucial to determine
               our specific user base. We focused on US high school students aged
               14-18 with ADHD as our main group, drawing from my tutoring
               experience with their challenges in English courses.
             </p>
-            <p className="mb-4 font-lora">
+            <p className="mb-2 leading-relaxed">
               Our research identified several key challenges for this group:
-              <ul className="list-disc ml-5 mt-2 mb-4">
-                <li>
-                  Difficulties with essay structure, particularly organizing
-                  sentences into cohesive paragraphs
-                </li>
-                <li>
-                  Writing anxiety – freezing when faced with ambiguous essay
-                  prompts
-                </li>
-                <li>
-                  Trouble meeting assignment deadlines due to challenges with
-                  time management
-                </li>
-              </ul>
             </p>
-            <p className="mb-4 font-lora">
+            <ul className="list-disc marker:text-vv-cyan ml-5 mb-4 space-y-1 leading-relaxed">
+              <li>
+                Difficulties with essay structure, particularly organizing
+                sentences into cohesive paragraphs
+              </li>
+              <li>
+                Writing anxiety – freezing when faced with ambiguous essay
+                prompts
+              </li>
+              <li>
+                Trouble meeting assignment deadlines due to challenges with time
+                management
+              </li>
+            </ul>
+            <p className="leading-relaxed">
               The teachers we partnered with emphasized the need for an
               interface that was engaging yet not overwhelming, supportive
               without being patronizing, and adaptive to different learning
               styles.
             </p>
           </div>
-        </div>
+        </section>
 
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-12">
-          <div className="w-full md:w-1/2">
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src={mindMap}
-                alt="Interactive mind map interface showing how Voice Verse helps students organize their thoughts visually before writing"
-                className="w-full h-64 object-contain"
-              />
-            </div>
-            <p className="text-sm text-gray-600 mt-2 text-center italic">
-              Mind map created during the ideation phase showing key concepts
-              for neurodivergent communication
-            </p>
-          </div>
-          <div className="w-full md:w-1/2 flex flex-col justify-start">
-            <h3 className="text-2xl font-bold mb-4 font-nunito">
-              Initial Ideation & Design Process
-            </h3>
-            <p className="font-lora mb-4">
+        {/* Ideation */}
+        <section className="grid md:grid-cols-2 gap-10 items-start">
+          <ZoomableImage
+            src={mindMap}
+            alt="Mind map from the ideation phase exploring conversational AI for neurodivergent communication"
+            caption="Mind map from the ideation phase"
+          />
+          <div>
+            <Eyebrow number="03" label="Ideation" />
+            <SectionHeading>Initial Ideation & Design Process</SectionHeading>
+            <p className="mb-4 leading-relaxed">
               As the sole developer and designer, I began the ideation phase
               with{" "}
-              <a
-                href="https://itk.mitre.org/"
-                className="underline decoration-black"
-              >
+              <TextLink href="https://itk.mitre.org/">
                 MITRE's Innovation Toolkit methodologies
-              </a>
+              </TextLink>
               . I started off with the Mindmapping Exercise, where I took the
               main topic as{" "}
               <i>Conversational AI for neurodivergent communication</i>, and
               listed out all thoughts, questions and concerns I had.
-              <br></br>
-              <br></br>
+            </p>
+            <p className="mb-4 leading-relaxed">
               As I supplemented my discoveries with research papers and
-              discussions with educators in English and special education, I was
-              able to grasp the technical capabilities and limitations of
+              discussions with educators in English and special education, I
+              was able to grasp the technical capabilities and limitations of
               conversational AI (at the moment, we are in the midst of a voice
               AI renaissance, and this idea gave me a clear picture into this
               space), the unique UI/UX considerations that would encourage
@@ -256,172 +430,126 @@ const VoiceVerseMain = () => {
               to appropriately sense and provide support in communication
               experiences.
             </p>
-            <p className="font-lora mb-4">
-              Through research papers and discussions with educators, I gained
-              insights into technical capabilities of conversational AI, UI/UX
-              considerations for neurodivergent users, and how to leverage AI to
-              provide appropriate support.
-            </p>
-            <p className="font-lora">
+            <p className="mb-2 leading-relaxed">
               I focused on 5 key questions through the Problem Framing Exercise:
-              <ul className="list-disc ml-5 mt-2 mb-2">
-                <li>
-                  How do ADHD-specific challenges manifest in writing tasks?
-                </li>
-                <li>
-                  How can conversational AI adapt to ADHD students' unique
-                  attention-based needs?
-                </li>
-                <li>
-                  How can AI provide structure without being overly rigid?
-                </li>
-                <li>
-                  How can the system support development of self-regulation
-                  strategies?
-                </li>
-                <li>
-                  What classroom ecosystem changes are needed to accommodate
-                  ADHD students?
-                </li>
-              </ul>
             </p>
+            <ul className="list-disc marker:text-vv-cyan ml-5 space-y-1 leading-relaxed">
+              <li>How do ADHD-specific challenges manifest in writing tasks?</li>
+              <li>
+                How can conversational AI adapt to ADHD students' unique
+                attention-based needs?
+              </li>
+              <li>How can AI provide structure without being overly rigid?</li>
+              <li>
+                How can the system support development of self-regulation
+                strategies?
+              </li>
+              <li>
+                What classroom ecosystem changes are needed to accommodate ADHD
+                students?
+              </li>
+            </ul>
           </div>
-        </div>
+        </section>
 
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-12">
-          <div className="w-full md:w-1/2">
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src={problemsSolutionsBoard}
-                alt="Problem-solution analysis board displaying challenges neurodivergent students face with writing and Voice Verse's solutions"
-                className="w-full h-64 object-contain"
-              />
-            </div>
-            <p className="text-sm text-gray-600 mt-2 text-center italic">
-              Problems and solutions board developed from teacher interviews
-              showing pain points and potential approaches
+        {/* Prototyping */}
+        <section className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="md:sticky md:top-8">
+            <ZoomableImage
+              src={problemsSolutionsBoard}
+              alt="Problems and solutions board: learned helplessness and academic ghostwriting, solved by scaffolding and guided questions"
+              caption="Problems (orange) and solutions (green) from teacher interviews"
+            />
+          </div>
+          <div>
+            <Eyebrow number="04" label="Iteration" />
+            <SectionHeading>User Interviews & Iterative Prototyping</SectionHeading>
+            <p className="mb-6 leading-relaxed">
+              The initial prototype functioned as a comprehensive essay creation
+              tool that, when provided with a single word topic, and student
+              answers to a few questions, an entire essay outline could be
+              generated. From the essay outline, the app would generate a few
+              more questions for students to answer, and then draft entire
+              paragraphs that they had the option of either accepting or
+              editing. The interface was optimized for efficiency, allowing
+              students to quickly produce polished-looking academic papers.
             </p>
+
+            <FeedbackLabel tone="before">Prototype 1 — teacher feedback</FeedbackLabel>
+            <Quote tone="before">
+              "My biggest concern was that students stopped engaging with the
+              actual writing process. They'd input minimal information and
+              expect the AI to do everything else. It reinforced their learned
+              helplessness rather than building the executive functioning
+              skills they desperately need."
+            </Quote>
+            <Quote tone="before">
+              "The writing quality was impressive, but it felt like academic
+              ghostwriting. How do I assess a student's understanding when the
+              AI generated most of the content? It also created this false
+              confidence in students — they thought they were better writers
+              than they actually were because the output looked so
+              professional."
+            </Quote>
+
+            <p className="my-6 leading-relaxed">
+              Learning from the first prototype's limitations, the second
+              iteration broke essay writing into discrete prompts that guided
+              students through each stage of the process, especially important
+              sequences in writing, such as thesis statement and topic sentence.
+              The UX was considerably changed, with brighter colors, and more
+              engaging designs. It emphasized interactivity, as we got rid of
+              static outlines, and entire paragraph generation. The AI now asked
+              targeted questions like "What's one specific example that supports
+              your main idea, and why?" or "How does this connect to what you
+              discussed in your previous paragraph?" The tool provided structure
+              and prompts while requiring students to generate their own ideas,
+              and produce responses in their own words.
+            </p>
+
+            <FeedbackLabel tone="after">Prototype 2 — teacher feedback</FeedbackLabel>
+            <Quote tone="after">
+              "This feels like having a writing coach sitting next to each
+              student. The prompts helped them organize their thoughts without
+              doing the thinking for them. This would help students who usually
+              freeze up during writing."
+            </Quote>
+            <Quote tone="after">
+              "The pacing is much better suited for ADHD students. Instead of
+              overwhelming them with a blank page, it gives them one manageable
+              task at a time. Students who normally give up after the
+              introduction will be able to complete full essays."
+            </Quote>
           </div>
-          <div className="w-full md:w-1/2 flex flex-col justify-start">
-            <h3 className="text-2xl font-bold mb-4 font-nunito">
-              User Interviews & Iterative Prototyping
-            </h3>
-            <div className="font-lora mb-6">
-              <p className="mb-4">
-                The initial prototype functioned as a comprehensive essay
-                creation tool that, when provided with a single word topic, and
-                student answers to a few questions, an entire essay outline
-                could be generated. From the essay outline, the app would
-                generate a few more questions for students to answer, and then
-                draft entire paragraphs that they had the option of either
-                accepting or editing. The interface was optimized for
-                efficiency, allowing students to quickly produce
-                polished-looking academic papers.
-              </p>
+        </section>
+      </div>
 
-              <p className="mb-4">
-                Upon demonstrating this to high school English educators, we
-                received the following feedback:
-              </p>
-
-              <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-4">
-                <p className="mb-2">
-                  "My biggest concern was that students stopped engaging with
-                  the actual writing process. They'd input minimal information
-                  and expect the AI to do everything else. It reinforced their
-                  learned helplessness rather than building the executive
-                  functioning skills they desperately need."
-                </p>
-              </blockquote>
-
-              <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-4">
-                <p>
-                  "The writing quality was impressive, but it felt like academic
-                  ghostwriting. How do I assess a student's understanding when
-                  the AI generated most of the content? It also created this
-                  false confidence in tudents — they thought they were better
-                  writers than they actually were because the output looked so
-                  professional."
-                </p>
-              </blockquote>
-
-              <p className="mb-4">
-                Learning from the first prototype's limitations, the second
-                iteration broke essay writing into discrete prompts that guided
-                students through each stage of the process, especially important
-                sequences in writing, such as thesis statement and topic
-                sentence. The UX was considerably changed, with brighter colors,
-                and more engaging designs. It emphasized interactivity, as we
-                got rid of static outlines, and entire paragraph generation. The
-                AI now asked targeted questions like "What's one specific
-                example that supports your main idea, and why?" or "How does
-                this connect to what you discussed in your previous paragraph?"
-                The tool provided structure and prompts while requiring students
-                to generate their own ideas, and produce responses in their own
-                words.
-              </p>
-
-              <p className="mb-4">
-                Upon demonstrating this to high school English educators, we
-                received the following feedback:
-              </p>
-
-              <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-4">
-                <p className="mb-2">
-                  "This feels like having a writing coach sitting next to each
-                  student. The prompts helped them organize their thoughts
-                  without doing the thinking for them. This would help students
-                  who usually freeze up during writing."
-                </p>
-              </blockquote>
-
-              <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-4">
-                <p>
-                  "The pacing is much better suited for ADHD students. Instead
-                  of overwhelming them with a blank page, it gives them one
-                  manageable task at a time. Students who normally give up after
-                  the introduction will be able to complete full essays."
-                </p>
-              </blockquote>
+      {/* Status + gallery */}
+      <FullBleed className="bg-vv-space text-white" style={starfield}>
+        <div className="max-w-[68rem] mx-auto px-8 py-16">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <Eyebrow number="05" label="Current status" dark />
+            <h2 className="text-3xl font-bold font-nunito mb-4">
+              In beta with high schools in NJ & VA
+            </h2>
+            <p className="font-nunito text-slate-300 mb-8">
+              The most recent version is still pending edits, but both versions
+              are live to try.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <ButtonLink href={V2_URL} primary>
+                Try the latest version
+              </ButtonLink>
+              <ButtonLink href={V1_URL}>Try v1</ButtonLink>
             </div>
           </div>
-        </div>
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold mb-4 font-nunito text-center">
-            Current Status
-          </h3>
-          <p className="font-lora mb-8 text-center">
-            As of today, this prototype is in the process of beta testing with
-            high schools in NJ and VA.
-            <br></br>
-            You can see the first version{" "}
-            <a
-              href="https://voice-verse-v1.web.app/"
-              className="underline decoration-black"
-            >
-              here
-            </a>
-            . The most recent version of the app is still pending edits, but you
-            can view it{" "}
-            <a
-              href="https://voice-verse-v2.web.app/"
-              className="underline decoration-black"
-            >
-              here
-            </a>
-            .
-          </p>
-        </div>
 
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold mb-4 font-nunito text-center">
-            Voice Verse Gallery
+          <h3 className="font-pixel text-vv-cyan text-lg text-center mb-8">
+            Gallery
           </h3>
-          <div className="mt-8 mb-16">
-            <GallerySlider slides={gallerySlides} />
-          </div>
+          <GallerySlider slides={gallerySlides} />
         </div>
-      </main>
+      </FullBleed>
     </div>
   );
 };
