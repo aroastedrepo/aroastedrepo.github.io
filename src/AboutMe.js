@@ -52,15 +52,15 @@ const AboutMe = () => {
               these models actually behave.
             </p>
             <p>
-              My recent work,{" "}
+              I designed and built{" "}
               <Link to="/voice-verse" className="underline decoration-black">
                 Voice Verse
               </Link>{" "}
-              and{" "}
+              end to end, and I'm the founder and product designer of{" "}
               <Link to="/go-sparkle" className="underline decoration-black">
                 Go Sparkle
               </Link>
-              , explores new patterns for AI that supports neurodivergent people
+              . Both explore new patterns for AI that supports neurodivergent people
               without taking over: AI that asks instead of answering, plans that
               bend instead of breaking, and prototypes tested with the teachers
               and coaches who know these users best.

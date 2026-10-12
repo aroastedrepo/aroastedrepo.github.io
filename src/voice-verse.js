@@ -51,11 +51,11 @@ const gallerySlides = [
 const decisions = [
   {
     title: "Scaffold the thinking, never ghostwrite",
-    body: "The AI only asks questions; every sentence comes from the student. This came straight from teachers' concern that v1 reinforced learned helplessness.",
+    body: "In the Mission Briefing, a robot guide asks four questions and students answer each one in their own words. The AI never drafts a sentence, a direct response to teachers' concern that v1 reinforced learned helplessness.",
   },
   {
     title: "One small task per screen",
-    body: "Each step locks in one thing (topic, thesis, evidence), so students never face a blank page. Teachers said this pacing is what lets students finish full essays.",
+    body: "Building a thesis takes four steps, Pick a Side, Give a Reason, Name Evidence and Lock In Thesis, and each screen asks for exactly one. Teachers said this pacing is what lets students who stall after the introduction finish full essays.",
   },
   {
     title: "Let students choose their level of support",
@@ -63,11 +63,11 @@ const decisions = [
   },
   {
     title: "Make the hard parts feel like play",
-    body: "Sorting relevant evidence becomes a spaceship game: fly into supporting phrases and dodge the junk. XP and levels reward progress, keeping the tool engaging without being overwhelming.",
+    body: "Sorting evidence becomes an asteroid-belt game: steer the ship into phrases that support your thesis and dodge off-topic junk like \"Chocolate cake is a favorite dessert for many celebrations.\" Earning XP moves students up from Space Cadet to Junior Pilot to Navigator.",
   },
   {
     title: "Ground every claim in real sources",
-    body: "A Google Scholar search, a stat field, and auto-filled author and year keep evidence tied to real research and build citation habits along the way.",
+    body: "Students write their own search keywords (a topic, a group and an outcome), search Google Scholar, then paste or say the stat they found. Voice Verse auto-fills the author and year from the article title, so every statistic is cited.",
   },
   {
     title: "Design and build in one loop",
@@ -363,8 +363,9 @@ const VoiceVerseMain = () => {
               essay writing into discrete prompts that guide students through
               each stage, especially the sequences that matter most, like the
               thesis statement and topic sentences. I removed static outlines
-              and full-paragraph generation, and redesigned the UX to be
-              brighter, more interactive and more engaging. Now the AI asks
+              and full-paragraph generation, and rebuilt the experience as a
+              space mission: students earn XP, level up, and work through each
+              step with a robot guide. Now the AI asks
               targeted questions like "What's one specific example that
               supports your main idea, and why?" or "How does this connect to
               what you discussed in your previous paragraph?" Students get

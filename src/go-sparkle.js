@@ -28,6 +28,7 @@ const PROTOTYPE_EMBED_URL =
   "https://embed.figma.com/proto/ZyZ3vjsfazJybzCAqStyp5?node-id=0-1&embed-host=share&scaling=scale-down&content-scaling=fixed";
 
 const facts = [
+  { label: "Role", value: "Founder & product designer" },
   { label: "Users", value: "Adults (18–35) with ADHD" },
   { label: "Partner", value: "ADHD coach, as co-designer" },
   { label: "Focus", value: "Emotional regulation & task transitions" },
@@ -128,7 +129,7 @@ const decisions = [
   },
   {
     title: "Personal from the first screen",
-    body: "At sign-in, users choose the octopus's color and accessory. Coach interviews and the competitive analysis both pointed to customization as key to sticking with an app.",
+    body: "At sign-in, users pick their octopus's color (purple, soft peach or misty blue) and an accessory (sparkle dots or a glitter crown). [WHY — pending]",
   },
 ];
 
@@ -227,7 +228,7 @@ const SparkleMain = () => {
             />
           </div>
         </div>
-        <dl className="max-w-[68rem] mx-auto px-8 pb-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <dl className="max-w-[68rem] mx-auto px-8 pb-10 grid grid-cols-2 md:grid-cols-5 gap-4">
           {facts.map((fact) => (
             <div
               key={fact.label}
