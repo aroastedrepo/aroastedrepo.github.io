@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import spPic from "./images/sp-pic.png";
 
 const AboutMe = () => {
@@ -30,36 +31,55 @@ const AboutMe = () => {
           </h1>
           <div className="space-y-6">
             <p>
-              I'm Sanjana, an ambitious, driven data scientist and product
-              designer. Formerly, I was an Associate for&nbsp;
+              I'm Sanjana, a product designer who builds. I take AI products
+              from the first user conversation to shipped software: running
+              discovery, prototyping in Figma, and writing the code myself. I
+              came to design through data science, so I like digging into
+              complex systems until they feel simple.
+            </p>
+            <p>
+              At&nbsp;
               <a
                 href="https://mitre.org"
                 className="underline decoration-black"
               >
                 MITRE
               </a>
-              's Network Analytics Division, where I led a research study that
-              built an iOS app to help low vision individuals navigate train
-              stations. As a part of this study, I submitted journal papers on
-              my research. During my tenure here, I also worked on fine-tuning
-              LLMs to support warfighters.
+              's Network Analytics Division, I led a research study that built
+              an iOS app to help low vision individuals navigate train stations,
+              and submitted journal papers on the work. I also fine-tuned LLMs
+              to support warfighters, which gave me hands-on experience with how
+              these models actually behave.
             </p>
             <p>
-              Currently, I am back on the job market. I'm looking for a role
-              with high agency, and high impact. I'd like to work on meaningful
-              problems, and develop software that addresses the needs of
-              vulnerable, marginalized communities.
+              My recent work,{" "}
+              <Link to="/voice-verse" className="underline decoration-black">
+                Voice Verse
+              </Link>{" "}
+              and{" "}
+              <Link to="/go-sparkle" className="underline decoration-black">
+                Go Sparkle
+              </Link>
+              , explores new patterns for AI that supports neurodivergent people
+              without taking over: AI that asks instead of answering, plans that
+              bend instead of breaking, and prototypes tested with the teachers
+              and coaches who know these users best.
             </p>
             <p>
-              If there is one quality that sets me apart from most engineers,
-              it's my compassion. I strive to listen, learn and cheer on others.
-              I'm always there to help out and support anyone, especially if
-              they are eager to share their ideas.
+              I'm looking for a product design role where I can work closely
+              with engineers, PMs and researchers on tools that help people
+              create, especially where design, code and AI meet. I care about
+              making powerful tools accessible to everyone, including the
+              communities that usually get designed for last.
+            </p>
+            <p>
+              What sets me apart is how I collaborate. I listen first, give
+              thoughtful feedback, and genuinely cheer on other people's ideas,
+              in critiques and across the team.
             </p>
 
             <p>
-              If you're interested in seeing how I can best support you, or want
-              to collaborate, feel free to reach out via{" "}
+              If you'd like to work together, reach out via{" "}
               <a
                 href="mailto:sanjanapendharkar01@gmail.com"
                 className="underline"

@@ -195,3 +195,20 @@ export const GallerySlider = ({
     </div>
   );
 };
+
+// Numbered "problem → decision → why" cards that make design rationale explicit.
+export const DecisionGrid = ({ decisions, cardClassName, numberClassName }) => (
+  <ol className="grid md:grid-cols-2 gap-6">
+    {decisions.map((d, i) => (
+      <li key={d.title} className={`rounded-2xl p-6 ${cardClassName}`}>
+        <span
+          className={`inline-flex w-8 h-8 rounded-full items-center justify-center font-nunito font-bold text-sm mb-4 ${numberClassName}`}
+        >
+          {i + 1}
+        </span>
+        <h3 className="font-nunito font-bold text-lg mb-2">{d.title}</h3>
+        <p className="leading-relaxed opacity-90">{d.body}</p>
+      </li>
+    ))}
+  </ol>
+);

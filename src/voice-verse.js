@@ -3,6 +3,7 @@ import {
   FullBleed,
   GallerySlider,
   ZoomableImage,
+  DecisionGrid,
   starfield,
 } from "./case-study-components";
 import alexUserProfile from "./images/alex_user_profile_vv.png";
@@ -44,6 +45,33 @@ const gallerySlides = [
     src: vvGoogleScholarFillins,
     alt: "Voice Verse research step with Google Scholar search, stat entry, and citation fields",
     caption: "Search Google Scholar, add a stat, and auto-fill the citation.",
+  },
+];
+
+const decisions = [
+  {
+    title: "Scaffold the thinking, never ghostwrite",
+    body: "The AI only asks questions; every sentence comes from the student. This came straight from teachers' concern that v1 reinforced learned helplessness.",
+  },
+  {
+    title: "One small task per screen",
+    body: "Each step locks in one thing (topic, thesis, evidence), so students never face a blank page. Teachers said this pacing is what lets students finish full essays.",
+  },
+  {
+    title: "Let students choose their level of support",
+    body: "Cadet gives step-by-step guidance, one sentence at a time; Captain gives more freedom, with templates and tools on demand. This answers the teachers' ask for an interface that adapts to different learning styles.",
+  },
+  {
+    title: "Make the hard parts feel like play",
+    body: "Sorting relevant evidence becomes a spaceship game: fly into supporting phrases and dodge the junk. XP and levels reward progress, keeping the tool engaging without being overwhelming.",
+  },
+  {
+    title: "Ground every claim in real sources",
+    body: "A Google Scholar search, a stat field, and auto-filled author and year keep evidence tied to real research and build citation habits along the way.",
+  },
+  {
+    title: "Design and build in one loop",
+    body: "As the sole designer and developer, I shipped both versions as live web apps, so teacher feedback became working builds students could test, not static mockups.",
   },
 ];
 
@@ -177,14 +205,13 @@ const VoiceVerseMain = () => {
             through the essay writing process.
           </p>
           <p className="leading-relaxed">
-            Upon realizing that this was a common need for neurodivergent
-            students, especially those with ADHD, I started reading papers in
-            this space, cold emailed 50+ high school special education teachers,
-            and, with their feedback, drafted a product requirements doc
-            outlining feature details. This outreach led to securing long-term
-            partnerships with two dedicated teachers who provided invaluable
-            insights throughout the design and development process, even
-            volunteering to run beta tests with their students.
+            Realizing this was a common need for neurodivergent students,
+            especially those with ADHD, I ran discovery the way I would on any
+            product: I read the research, cold emailed 50+ high school special
+            education teachers, and turned their feedback into a product
+            requirements doc. Two of those teachers became long-term design
+            partners. They shaped every iteration and volunteered to run beta
+            tests with their students.
           </p>
         </section>
 
@@ -262,15 +289,12 @@ const VoiceVerseMain = () => {
               listed out all thoughts, questions and concerns I had.
             </p>
             <p className="mb-4 leading-relaxed">
-              As I supplemented my discoveries with research papers and
-              discussions with educators in English and special education, I
-              was able to grasp the technical capabilities and limitations of
-              conversational AI (at the moment, we are in the midst of a voice
-              AI renaissance, and this idea gave me a clear picture into this
-              space), the unique UI/UX considerations that would encourage
-              adoption in the neurodivergent community, and how to leverage AI
-              to appropriately sense and provide support in communication
-              experiences.
+              Pairing research papers with conversations with English and
+              special education teachers gave me a clear picture of three
+              things: what conversational AI can and can't reliably do, the
+              UI/UX considerations that drive adoption in the neurodivergent
+              community, and how AI can sense when a student needs support
+              without taking over.
             </p>
             <p className="mb-2 leading-relaxed">
               I focused on 5 key questions through the Problem Framing Exercise:
@@ -308,14 +332,12 @@ const VoiceVerseMain = () => {
             <Eyebrow number="04" label="Iteration" />
             <SectionHeading>User Interviews & Iterative Prototyping</SectionHeading>
             <p className="mb-6 leading-relaxed">
-              The initial prototype functioned as a comprehensive essay creation
-              tool that, when provided with a single word topic, and student
-              answers to a few questions, an entire essay outline could be
-              generated. From the essay outline, the app would generate a few
-              more questions for students to answer, and then draft entire
-              paragraphs that they had the option of either accepting or
-              editing. The interface was optimized for efficiency, allowing
-              students to quickly produce polished-looking academic papers.
+              My first prototype bet on efficiency. From a single-word topic and
+              answers to a few questions, it generated an entire essay outline,
+              asked a few follow-up questions, and then drafted full paragraphs
+              that students could accept or edit. Students could produce
+              polished-looking papers quickly, so I put it in front of the
+              teachers to test that bet.
             </p>
 
             <FeedbackLabel tone="before">Prototype 1 — teacher feedback</FeedbackLabel>
@@ -336,18 +358,17 @@ const VoiceVerseMain = () => {
             </Quote>
 
             <p className="my-6 leading-relaxed">
-              Learning from the first prototype's limitations, the second
-              iteration broke essay writing into discrete prompts that guided
-              students through each stage of the process, especially important
-              sequences in writing, such as thesis statement and topic sentence.
-              The UX was considerably changed, with brighter colors, and more
-              engaging designs. It emphasized interactivity, as we got rid of
-              static outlines, and entire paragraph generation. The AI now asked
-              targeted questions like "What's one specific example that supports
-              your main idea, and why?" or "How does this connect to what you
-              discussed in your previous paragraph?" The tool provided structure
-              and prompts while requiring students to generate their own ideas,
-              and produce responses in their own words.
+              The feedback reframed the problem: the AI shouldn't write for
+              students, it should help them think. The second iteration broke
+              essay writing into discrete prompts that guide students through
+              each stage, especially the sequences that matter most, like the
+              thesis statement and topic sentences. I removed static outlines
+              and full-paragraph generation, and redesigned the UX to be
+              brighter, more interactive and more engaging. Now the AI asks
+              targeted questions like "What's one specific example that
+              supports your main idea, and why?" or "How does this connect to
+              what you discussed in your previous paragraph?" Students get
+              structure, but the ideas and the words are their own.
             </p>
 
             <FeedbackLabel tone="after">Prototype 2 — teacher feedback</FeedbackLabel>
@@ -365,13 +386,30 @@ const VoiceVerseMain = () => {
             </Quote>
           </div>
         </section>
+
+        {/* Design decisions */}
+        <section>
+          <div className="max-w-3xl mb-8">
+            <Eyebrow number="05" label="Design decisions" />
+            <SectionHeading>Key design decisions</SectionHeading>
+            <p className="leading-relaxed">
+              Each decision traces back to something students or teachers told
+              me, and each one shows up in the shipped product.
+            </p>
+          </div>
+          <DecisionGrid
+            decisions={decisions}
+            cardClassName="bg-white ring-1 ring-black/5 shadow-sm text-gray-800"
+            numberClassName="bg-vv-space text-vv-cyan"
+          />
+        </section>
       </div>
 
       {/* Status + gallery */}
       <FullBleed className="bg-vv-space text-white" style={starfield}>
         <div className="max-w-[68rem] mx-auto px-8 py-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <Eyebrow number="05" label="Current status" dark />
+            <Eyebrow number="06" label="Current status" dark />
             <h2 className="text-3xl font-bold font-nunito mb-4">
               In beta with high schools in NJ & VA
             </h2>

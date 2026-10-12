@@ -3,6 +3,7 @@ import {
   FullBleed,
   GallerySlider,
   ZoomableImage,
+  DecisionGrid,
 } from "./case-study-components";
 
 import aliyaUserProfile from "./images/aliya_user_profile_spai.png";
@@ -101,6 +102,33 @@ const journeyStages = [
     body: "Our app recognizes when users are in the final stages and provides extra motivation through celebratory feedback and micro-step breakdowns. Our AI coach offers emotional support during the challenging completion phase, helping users push through the final 10-20% with encouragement and concrete next steps.",
     quote:
       "I see so many projects that are 90% done just sitting there. They get so close to the finish line and then hit this wall where it feels impossible to take those last few steps.",
+  },
+];
+
+const decisions = [
+  {
+    title: "Plans bend instead of break",
+    body: "In Sparkle my day, users say how they feel (I'm behind, low energy, too much planned) and get a gentler plan that keeps, shortens or moves each event. A derailed day becomes something to adjust, not a reason to feel shame.",
+  },
+  {
+    title: "The AI suggests, the user decides",
+    body: "Nothing changes until the user confirms. The proposed plan sits next to the current one, with a one-tap way to keep the original, so the AI never quietly rewrites someone's day.",
+  },
+  {
+    title: "Tentacle-sized steps",
+    body: "Tentacle focus turns a calendar moment into at most eight tiny, timed steps, one per tentacle. The metaphor caps the scope, so getting started always feels small.",
+  },
+  {
+    title: "Progress that's visible and forgiving",
+    body: "Tentacles glow as each step is completed, and pausing is built in: \"Pauses are welcome. Your growth stays with you.\" Focus is rewarded without punishing interruptions.",
+  },
+  {
+    title: "Reflection you can watch grow",
+    body: "In the Gratitude Reef, moments with friends become coral and personal wins become shells. Missing a day never erases a memory, so the positive reinforcement users valued in Loop never turns into a streak to lose.",
+  },
+  {
+    title: "Personal from the first screen",
+    body: "At sign-in, users choose the octopus's color and accessory. Coach interviews and the competitive analysis both pointed to customization as key to sticking with an app.",
   },
 ];
 
@@ -220,16 +248,14 @@ const SparkleMain = () => {
           <Eyebrow number="01" label="Background" />
           <SectionHeading>Why I built it</SectionHeading>
           <p className="leading-relaxed">
-            Go Sparkle emerged from a lasting set of conversations I had with an
-            ADHD coach, who was discussing the unique challenges her clients
-            faced. These conversations revealed a gap in existing tools—nothing
-            specifically addressed the intersection of neurodivergent thinking
-            patterns and voice AI assistance. The coach noticed that her clients
-            often struggled with traditional task management systems due to
-            their lack of adaptability to the executive functioning needs of
-            ADHD clients. This insight sparked the idea for an AI coach that
-            could provide the kind of gentle, consistent time management
-            guidance and strategies that many people with ADHD need to thrive.
+            Go Sparkle grew out of an ongoing series of conversations with an
+            ADHD coach about the challenges her clients faced. Her clients kept
+            bouncing off traditional task managers, which assume a steady,
+            linear executive function that many people with ADHD don't have,
+            and nothing on the market combined neurodivergent thinking patterns
+            with voice AI assistance. That gap became the brief: an AI coach
+            that offers the gentle, consistent time management guidance and
+            strategies people with ADHD need to thrive.
           </p>
         </section>
 
@@ -351,10 +377,11 @@ const SparkleMain = () => {
               .
             </p>
             <p className="leading-relaxed">
-              We decided to tackle both problems in our long term task
-              management planning app by providing users with a UX that aligned
-              with how people with ADHD communicate emotionally and provided
-              simple cues to help them switch between tasks.
+              No single app covered every need: Mindshift led on emotional
+              regulation, Fabulous on transitions, Loop on tracking and TimeTune
+              on time management. That set the design goal: one planning app
+              whose UX matches how people with ADHD communicate emotionally,
+              with simple cues to help them switch between tasks.
             </p>
           </div>
         </section>
@@ -394,6 +421,23 @@ const SparkleMain = () => {
             </ol>
           </div>
         </section>
+
+        {/* Design decisions */}
+        <section>
+          <div className="max-w-3xl mb-8">
+            <Eyebrow number="05" label="Design decisions" />
+            <SectionHeading>Key design decisions</SectionHeading>
+            <p className="leading-relaxed">
+              Each screen in the redesign answers one of the research problems.
+              These are the calls that shaped it.
+            </p>
+          </div>
+          <DecisionGrid
+            decisions={decisions}
+            cardClassName="bg-gs-lavender text-gs-plum"
+            numberClassName="bg-white text-gs-purple ring-1 ring-gs-octo/30"
+          />
+        </section>
       </div>
 
       {/* Clickable prototype */}
@@ -403,7 +447,7 @@ const SparkleMain = () => {
           className="max-w-[68rem] mx-auto px-8 py-16 grid md:grid-cols-[1fr_auto] gap-12 items-center scroll-mt-8"
         >
           <div>
-            <Eyebrow number="05" label="Prototype" />
+            <Eyebrow number="06" label="Prototype" />
             <SectionHeading>Click through Go Sparkle</SectionHeading>
             <p className="leading-relaxed mb-6">
               This is the live Figma prototype. Tap the buttons on the phone to
@@ -437,16 +481,15 @@ const SparkleMain = () => {
       <div className="max-w-5xl mx-auto py-16 space-y-20">
         {/* Process + status */}
         <section className="max-w-3xl mx-auto text-center">
-          <Eyebrow number="06" label="Process & status" />
+          <Eyebrow number="07" label="Process & status" />
           <SectionHeading>Prototyping with a co-designer</SectionHeading>
           <p className="leading-relaxed mb-4">
-            Our prototyping approach evolved through multiple iteration cycles,
-            each specifically designed to address the unique challenges faced by
-            ADHD users. We began with low-fidelity wireframes and concept
-            sketches to test interaction patterns. Early prototypes explored
-            different ways users could input tasks and receive guidance, testing
-            whether traditional menu structures or more fluid, conversational
-            approaches worked better for our target demographic.
+            The prototype evolved through several iteration cycles, each aimed
+            at a specific challenge ADHD users face. We started with
+            low-fidelity wireframes and concept sketches to test interaction
+            patterns, then explored different ways to enter tasks and receive
+            guidance, testing whether traditional menus or more fluid,
+            conversational approaches worked better for our users.
           </p>
           <p className="leading-relaxed mb-8">
             We adopted co-design approaches with the ADHD coach that treated her
@@ -455,7 +498,7 @@ const SparkleMain = () => {
             discussions. She helped us understand which features felt supportive
             versus overwhelming, where AI could be used as a motivator, and how
             AI could be used to re-engage or inspire a user to pursue their
-            goals in a manageable method.
+            goals in a manageable way.
           </p>
           <div className="inline-block bg-gs-lavender rounded-2xl px-6 py-4 font-nunito text-gs-plum">
             <span className="font-bold">Now:</span> starting beta testing for
@@ -467,7 +510,7 @@ const SparkleMain = () => {
         {/* Gallery */}
         <section>
           <div className="text-center mb-8">
-            <Eyebrow number="07" label="Gallery" />
+            <Eyebrow number="08" label="Gallery" />
             <SectionHeading>Screens from the redesign</SectionHeading>
           </div>
           <GallerySlider
