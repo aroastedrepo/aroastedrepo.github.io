@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.b66b076f.css",
-    "main.js": "/static/js/main.a9078cec.js",
+    "main.js": "/static/js/main.3c784d90.js",
     "static/js/453.8fb6fbf6.chunk.js": "/static/js/453.8fb6fbf6.chunk.js",
-    "static/media/alex_user_profile_vv.png": "/static/media/alex_user_profile_vv.f30664d87cd43dea0201.png",
-    "static/media/ariana_user_profile_vv.png": "/static/media/ariana_user_profile_vv.3d86dc442c5f9011dbd9.png",
+    "static/media/alex_user_profile_vv.png": "/static/media/alex_user_profile_vv.d42f54ef808e59cbc40d.png",
     "static/media/aliya_user_profile_spai.png": "/static/media/aliya_user_profile_spai.392d61fb31774f72223a.png",
+    "static/media/ariana_user_profile_vv.png": "/static/media/ariana_user_profile_vv.fdc483a2909083a0d093.png",
     "static/media/eric_user_profile_spai.png": "/static/media/eric_user_profile_spai.11e05efd2ed0ca0b780b.png",
     "static/media/go_sparkle_logo.png": "/static/media/go_sparkle_logo.174f4e3811fc3337c9d9.png",
     "static/media/voice_verse_logo_1.png": "/static/media/voice_verse_logo_1.a175979ff510a7a59f3d.png",
-    "static/media/problems_solutions_board.png": "/static/media/problems_solutions_board.2244b0e328e7ccc05bce.png",
+    "static/media/problems_solutions_board.png": "/static/media/problems_solutions_board.09f4e3798c42e4e46c5c.png",
     "static/media/mind_map_vv.png": "/static/media/mind_map_vv.eef745a2f4b5422181c8.png",
     "static/media/vv_conversational_ai.png": "/static/media/vv_conversational_ai.48350991d76ab256c7d5.png",
     "static/media/vv_factual_spaceship_game.png": "/static/media/vv_factual_spaceship_game.2655cf39d59a40ccafc6.png",
@@ -29,11 +29,11 @@
     "static/media/login-ui.png": "/static/media/login-ui.3df0b25783a1019d68d3.png",
     "index.html": "/index.html",
     "main.b66b076f.css.map": "/static/css/main.b66b076f.css.map",
-    "main.a9078cec.js.map": "/static/js/main.a9078cec.js.map",
+    "main.3c784d90.js.map": "/static/js/main.3c784d90.js.map",
     "453.8fb6fbf6.chunk.js.map": "/static/js/453.8fb6fbf6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b66b076f.css",
-    "static/js/main.a9078cec.js"
+    "static/js/main.3c784d90.js"
   ]
 }
