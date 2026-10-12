@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ba4b877.css",
-    "main.js": "/static/js/main.8397f3e7.js",
+    "main.css": "/static/css/main.0f30ad0d.css",
+    "main.js": "/static/js/main.be644ace.js",
     "static/js/453.8fb6fbf6.chunk.js": "/static/js/453.8fb6fbf6.chunk.js",
     "static/media/alex_user_profile_vv.png": "/static/media/alex_user_profile_vv.d42f54ef808e59cbc40d.png",
     "static/media/aliya_user_profile_spai.png": "/static/media/aliya_user_profile_spai.392d61fb31774f72223a.png",
@@ -12,28 +12,29 @@
     "static/media/problems_solutions_board.png": "/static/media/problems_solutions_board.09f4e3798c42e4e46c5c.png",
     "static/media/mind_map_vv.png": "/static/media/mind_map_vv.eef745a2f4b5422181c8.png",
     "static/media/vv_conversational_ai.png": "/static/media/vv_conversational_ai.48350991d76ab256c7d5.png",
+    "static/media/gs_calendar.png": "/static/media/gs_calendar.fe2b553bd08d8885a54b.png",
     "static/media/vv_factual_spaceship_game.png": "/static/media/vv_factual_spaceship_game.2655cf39d59a40ccafc6.png",
+    "static/media/gs_sparkle_my_day.png": "/static/media/gs_sparkle_my_day.0df4fc9a0e86047ab473.png",
+    "static/media/gs_reef_memory.png": "/static/media/gs_reef_memory.97b58183ee1078ab30fe.png",
+    "static/media/gs_gratitude_reef.png": "/static/media/gs_gratitude_reef.eb4d483f137c92e7dd08.png",
+    "static/media/gs_tentacle_focus.png": "/static/media/gs_tentacle_focus.022c65f487e7fe039d4d.png",
+    "static/media/gs_growing_together.png": "/static/media/gs_growing_together.f0a5b88c806f5b96c9fc.png",
     "static/media/apps_key_problems_spai.png": "/static/media/apps_key_problems_spai.2699d54d73950451faca.png",
     "static/media/vv_essay_topic_addition.png": "/static/media/vv_essay_topic_addition.891f88cbe5ffb9b694da.png",
     "static/media/vv_login.png": "/static/media/vv_login.8ec135e617334ae3eed4.png",
     "static/media/user_journey_spai.png": "/static/media/user_journey_spai.27f01f908b9a9f3de0d6.png",
-    "static/media/monthly_breakdown.png": "/static/media/monthly_breakdown.af3725654961b93703d3.png",
-    "static/media/weekly_breakdown_for_month.png": "/static/media/weekly_breakdown_for_month.e9773bacb645f695edaf.png",
-    "static/media/transition_routines.png": "/static/media/transition_routines.9a90b4e7ab89f947519a.png",
+    "static/media/gs_login.png": "/static/media/gs_login.2318a4d3298d303b9ef6.png",
     "static/media/sp-pic.png": "/static/media/sp-pic.2d4039657eb08c4228d4.png",
-    "static/media/long_term_projects.png": "/static/media/long_term_projects.72cac8c31f70ba6a2baa.png",
-    "static/media/calendar_view.png": "/static/media/calendar_view.a7476603ece82dd73322.png",
-    "static/media/create_new_task.png": "/static/media/create_new_task.d9460826156c415f613a.png",
+    "static/media/gs_login_blue.png": "/static/media/gs_login_blue.c272a2aa4033277a5b12.png",
+    "static/media/gs_login_peach.png": "/static/media/gs_login_peach.17765bcb0574791ee312.png",
     "static/media/vv_google_scholar_fillins.webp": "/static/media/vv_google_scholar_fillins.f600720b9cc21497311c.webp",
-    "static/media/lock_in.png": "/static/media/lock_in.0ea45a4cc6d6fc214345.png",
-    "static/media/login-ui.png": "/static/media/login-ui.3df0b25783a1019d68d3.png",
     "index.html": "/index.html",
-    "main.3ba4b877.css.map": "/static/css/main.3ba4b877.css.map",
-    "main.8397f3e7.js.map": "/static/js/main.8397f3e7.js.map",
+    "main.0f30ad0d.css.map": "/static/css/main.0f30ad0d.css.map",
+    "main.be644ace.js.map": "/static/js/main.be644ace.js.map",
     "453.8fb6fbf6.chunk.js.map": "/static/js/453.8fb6fbf6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ba4b877.css",
-    "static/js/main.8397f3e7.js"
+    "static/css/main.0f30ad0d.css",
+    "static/js/main.be644ace.js"
   ]
 }
