@@ -3,6 +3,17 @@ import React, { useEffect, useState } from "react";
 // Building blocks shared by the project case study pages. Colors come in as
 // Tailwind class strings so each project keeps its own palette.
 
+// Faint star field used behind dark bands, echoing the app's background.
+export const starfield = {
+  backgroundImage:
+    "radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.7), transparent)," +
+    "radial-gradient(1px 1px at 78% 14%, rgba(255,255,255,0.5), transparent)," +
+    "radial-gradient(1.5px 1.5px at 42% 68%, rgba(255,255,255,0.6), transparent)," +
+    "radial-gradient(1px 1px at 88% 76%, rgba(255,255,255,0.5), transparent)," +
+    "radial-gradient(1px 1px at 25% 88%, rgba(255,255,255,0.4), transparent)," +
+    "radial-gradient(1.5px 1.5px at 62% 38%, rgba(255,255,255,0.5), transparent)",
+};
+
 export const FullBleed = ({ className = "", style, children }) => (
   <section
     className={`relative left-1/2 w-screen -translate-x-1/2 ${className}`}

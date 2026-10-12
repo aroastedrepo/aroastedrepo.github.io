@@ -3,6 +3,7 @@ import {
   FullBleed,
   GallerySlider,
   ZoomableImage,
+  starfield,
 } from "./case-study-components";
 import alexUserProfile from "./images/alex_user_profile_vv.png";
 import arianaUserProfile from "./images/ariana_user_profile_vv.png";
@@ -17,16 +18,6 @@ import vvGoogleScholarFillins from "./images/voice_verse/vv_google_scholar_filli
 const V1_URL = "https://voice-verse-v1.web.app/";
 const V2_URL = "https://voice-verse-v2.web.app/";
 
-// Faint star field used behind the dark bands, echoing the app's background.
-const starfield = {
-  backgroundImage:
-    "radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.7), transparent)," +
-    "radial-gradient(1px 1px at 78% 14%, rgba(255,255,255,0.5), transparent)," +
-    "radial-gradient(1.5px 1.5px at 42% 68%, rgba(255,255,255,0.6), transparent)," +
-    "radial-gradient(1px 1px at 88% 76%, rgba(255,255,255,0.5), transparent)," +
-    "radial-gradient(1px 1px at 25% 88%, rgba(255,255,255,0.4), transparent)," +
-    "radial-gradient(1.5px 1.5px at 62% 38%, rgba(255,255,255,0.5), transparent)",
-};
 
 const gallerySlides = [
   {
