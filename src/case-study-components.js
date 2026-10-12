@@ -200,7 +200,14 @@ export const GallerySlider = ({
 export const DecisionGrid = ({ decisions, cardClassName, numberClassName }) => (
   <ol className="grid md:grid-cols-2 gap-6">
     {decisions.map((d, i) => (
-      <li key={d.title} className={`rounded-2xl p-6 ${cardClassName}`}>
+      <li
+        key={d.title}
+        className={`rounded-2xl p-6 ${cardClassName} ${
+          decisions.length % 2 === 1 && i === decisions.length - 1
+            ? "md:col-span-2"
+            : ""
+        }`}
+      >
         <span
           className={`inline-flex w-8 h-8 rounded-full items-center justify-center font-nunito font-bold text-sm mb-4 ${numberClassName}`}
         >

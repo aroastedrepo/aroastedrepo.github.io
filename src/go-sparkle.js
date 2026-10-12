@@ -32,7 +32,7 @@ const facts = [
   { label: "Users", value: "Adults (18–35) with ADHD" },
   { label: "Partner", value: "ADHD coach, as co-designer" },
   { label: "Focus", value: "Emotional regulation & task transitions" },
-  { label: "Status", value: "Starting mobile beta testing" },
+  { label: "Status", value: "Starting mobile beta" },
 ];
 
 const screens = [
@@ -129,7 +129,11 @@ const decisions = [
   },
   {
     title: "Personal from the first screen",
-    body: "At sign-in, users pick their octopus's color (purple, soft peach or misty blue) and an accessory (sparkle dots or a glitter crown). [WHY — pending]",
+    body: "Before anything else, users pick their octopus's color (purple, soft peach or misty blue) and an accessory (sparkle dots or a glitter crown). The goal is attachment to a companion, so a missed day feels like letting your octopus down rather than failing a to-do list.",
+  },
+  {
+    title: "Voice where it helps, taps where they're faster",
+    body: "Sparkle can talk users through certain screens, but only if they turn it on in settings. Routine choices, like picking how you feel in Sparkle my day or choosing a calendar moment in Tentacle focus, are taps and menus, so nobody has to guess the right phrasing.",
   },
 ];
 
@@ -255,8 +259,8 @@ const SparkleMain = () => {
             linear executive function that many people with ADHD don't have,
             and nothing on the market combined neurodivergent thinking patterns
             with voice AI assistance. That gap became the brief: an AI coach
-            that offers the gentle, consistent time management guidance and
-            strategies people with ADHD need to thrive.
+            that plans with users, adapts when their day derails, and breaks
+            tasks into steps small enough to start.
           </p>
         </section>
 
@@ -483,28 +487,32 @@ const SparkleMain = () => {
         {/* Process + status */}
         <section className="max-w-3xl mx-auto text-center">
           <Eyebrow number="07" label="Process & status" />
-          <SectionHeading>Prototyping with a co-designer</SectionHeading>
+          <SectionHeading>From voice-only to voice where it helps</SectionHeading>
           <p className="leading-relaxed mb-4">
-            The prototype evolved through several iteration cycles, each aimed
-            at a specific challenge ADHD users face. We started with
-            low-fidelity wireframes and concept sketches to test interaction
-            patterns, then explored different ways to enter tasks and receive
-            guidance, testing whether traditional menus or more fluid,
-            conversational approaches worked better for our users.
+            Research pointed to voice AI as a strong fit for neurodivergent
+            users, so the first version had no screens at all: just you and
+            Sparkle. The octopus talked you through your whole day, kept you
+            on track, and switched into a focus mode to help you lock in.
+          </p>
+          <p className="leading-relaxed mb-4">
+            My co-designer, the ADHD coach, pushed back: voice alone would be
+            cumbersome for her millennial and older clients. So I added menus
+            and structured forms for high-frequency, routine tasks. They lower
+            cognitive load, because the options are laid out instead of
+            remembered, and they make errors predictable enough to design
+            for. Voice stayed for the moments where it helps, as an opt-in.
           </p>
           <p className="leading-relaxed mb-8">
-            We adopted co-design approaches with the ADHD coach that treated her
-            as a collaborator rather than just a test subject. We prioritized
-            involving her in brainstorming sessions and prototype refinement
-            discussions. She helped us understand which features felt supportive
-            versus overwhelming, where AI could be used as a motivator, and how
-            AI could be used to re-engage or inspire a user to pursue their
-            goals in a manageable way.
+            Throughout, the coach worked as a co-designer, not a test subject:
+            she joined brainstorming sessions and prototype reviews, and helped
+            decide which features felt supportive versus overwhelming, and
+            where the AI should motivate users or step back.
           </p>
           <div className="inline-block bg-gs-lavender rounded-2xl px-6 py-4 font-nunito text-gs-plum">
-            <span className="font-bold">Now:</span> starting beta testing for
-            the mobile app. Once it hits our target metrics, it heads to the App
-            Store and Google Play.
+            <span className="font-bold">Now:</span> starting the mobile beta.
+            The bar for launching on the App Store and Google Play: 80%
+            retention over three weeks, and survey scores of 9/10 for
+            usability, presentation and satisfaction.
           </div>
         </section>
 

@@ -79,7 +79,7 @@ const facts = [
   { label: "Role", value: "Sole designer & developer" },
   { label: "Users", value: "High schoolers (14–18) with ADHD" },
   { label: "Partners", value: "Two special education teachers" },
-  { label: "Status", value: "Beta testing in NJ & VA" },
+  { label: "Status", value: "Preparing a beta with NJ schools" },
 ];
 
 const Eyebrow = ({ number, label, dark = false }) => (
@@ -210,8 +210,8 @@ const VoiceVerseMain = () => {
             product: I read the research, cold emailed 50+ high school special
             education teachers, and turned their feedback into a product
             requirements doc. Two of those teachers became long-term design
-            partners. They shaped every iteration and volunteered to run beta
-            tests with their students.
+            partners. They reviewed both prototypes and have offered to run
+            beta tests with their students.
           </p>
         </section>
 
@@ -288,14 +288,25 @@ const VoiceVerseMain = () => {
               <i>Conversational AI for neurodivergent communication</i>, and
               listed out all thoughts, questions and concerns I had.
             </p>
-            <p className="mb-4 leading-relaxed">
-              Pairing research papers with conversations with English and
-              special education teachers gave me a clear picture of three
-              things: what conversational AI can and can't reliably do, the
-              UI/UX considerations that drive adoption in the neurodivergent
-              community, and how AI can sense when a student needs support
-              without taking over.
+            <p className="mb-2 leading-relaxed">
+              Research papers and conversations with English and special
+              education teachers pointed to two UI principles for
+              neurodivergent users:
             </p>
+            <ul className="list-disc marker:text-vv-cyan ml-5 mb-4 space-y-1 leading-relaxed">
+              <li>
+                <strong>Predictability:</strong> steady layouts, standard
+                interface patterns and literal labels prevent the anxiety and
+                cognitive fatigue that surprises cause for users with autism or
+                ADHD.
+              </li>
+              <li>
+                <strong>User control:</strong> letting people adjust the display
+                (dark mode, font spacing, color contrast) and pause or stop
+                animations, sounds and timed interactions supports each
+                person's own regulation needs.
+              </li>
+            </ul>
             <p className="mb-2 leading-relaxed">
               I focused on 5 key questions through the Problem Framing Exercise:
             </p>
@@ -412,11 +423,13 @@ const VoiceVerseMain = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <Eyebrow number="06" label="Current status" dark />
             <h2 className="text-3xl font-bold font-nunito mb-4">
-              In beta with high schools in NJ & VA
+              Next: a beta with New Jersey schools
             </h2>
             <p className="font-nunito text-slate-300 mb-8">
-              The most recent version is still pending edits, but both versions
-              are live to try.
+              A professor at the Rutgers Graduate School of Education is
+              advising the project and connecting it with NJ teachers and
+              administrators. The latest version is still being refined, and
+              both versions are live to try.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <ButtonLink href={V2_URL} primary>
