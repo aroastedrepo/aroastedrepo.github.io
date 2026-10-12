@@ -240,13 +240,11 @@ const SparkleMain = () => {
               src={aliyaUserProfile}
               alt="User persona for Aliya, a content creator with ADHD"
               caption="Aliya — content creator juggling commitments"
-              overlayClassName="bg-gs-plum/85"
             />
             <ZoomableImage
               src={ericUserProfile}
               alt="User persona for Eric, a management consultant with ADHD"
               caption="Eric — consultant studying for the GMAT"
-              overlayClassName="bg-gs-plum/85"
             />
           </div>
           <div>
@@ -310,7 +308,6 @@ const SparkleMain = () => {
             src={appsKeyProblems}
             alt="The key needs of ADHD clients and the best existing app for each"
             caption="Key needs of ADHD clients, and the best existing app for each"
-            overlayClassName="bg-gs-plum/85"
           />
           <div>
             <Eyebrow number="03" label="Competitive analysis" />
@@ -369,7 +366,6 @@ const SparkleMain = () => {
               src={userJourney}
               alt="User journey: five stages of task management and how Go Sparkle supports each"
               caption="The five stages of the user journey"
-              overlayClassName="bg-gs-plum/85"
             />
           </div>
           <div>
