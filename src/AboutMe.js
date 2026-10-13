@@ -31,71 +31,37 @@ const AboutMe = () => {
           </h1>
           <div className="space-y-6">
             <p>
-              I'm Sanjana, a product designer who builds. I take AI products
-              from the first user conversation to shipped software: running
-              discovery, prototyping in Figma, and writing the code myself.
+              I'm Sanjana, a product designer who builds: I run discovery,
+              prototype in Figma, and write the code myself.
             </p>
             <p>
-              I came to design through data science. As an Associate in&nbsp;
+              I came to design through data science at&nbsp;
               <a
                 href="https://mitre.org"
                 className="underline decoration-black"
               >
                 MITRE
               </a>
-              's Network Analytics Division, I designed and built an evaluation
-              framework for a military operations pipeline, and used geospatial
-              libraries to pinpoint US schools struggling with broadband access
-              as the government rolled out 5G.
-            </p>
-            <p>
-              I also led a MITRE research study on helping low vision travelers
-              navigate train stations. I designed the iOS app in Figma, built it
-              in Swift, and fine-tuned a transformer in PyTorch for obstacle
-              detection, on a dataset of 1,000+ train station photos I collected
-              from scratch. Early testing with five mentors showed it needed
-              work, so I'm redesigning it with multimodal models for subtler
-              cues and indoor positioning for better spatial awareness. I
-              submitted journal papers on the work.
-            </p>
-            <p>
-              I fine-tuned LLMs to improve the generation step of a RAG
-              pipeline supporting warfighters. In 2024, we used fine-tuning to
-              teach the model facts, and it overfit. That taught me to separate
-              knowledge from behavior: retrieval supplies the facts, and
-              fine-tuning shapes domain vocabulary, instruction following and
-              tone. I design AI features the same way.
+              . There, I led a study helping low vision travelers navigate
+              train stations, designing the iOS app in Figma and building it in
+              Swift, with an obstacle detection model trained on 1,000+ photos I
+              collected. I also fine-tuned LLMs for a RAG pipeline, and learned
+              to keep facts in retrieval and use fine-tuning only for behavior.
             </p>
             <p>
               I designed and built{" "}
               <Link to="/voice-verse" className="underline decoration-black">
                 Voice Verse
               </Link>{" "}
-              end to end, and I'm the founder and product designer of{" "}
+              and founded{" "}
               <Link to="/go-sparkle" className="underline decoration-black">
                 Go Sparkle
               </Link>
-              . Both explore new patterns for AI that supports neurodivergent
-              people without taking over: AI that asks instead of answering,
-              plans that bend instead of breaking, and prototypes tested with
-              the teachers and coaches who know these users best.
+              : AI tools for people with ADHD that ask instead of answering.
             </p>
             <p>
-              I'm looking for a product design role where I can work closely
-              with engineers, PMs and researchers on tools that help people
-              create, especially where design, code and AI meet. Every product
-              I've led serves people most tools overlook: low vision commuters,
-              students with ADHD, and adults managing ADHD.
-            </p>
-            <p>
-              I give direct, useful feedback. When I critiqued a colleague's
-              Early Career Research Program proposal at MITRE, I pushed for more
-              rigor in the approach and more citations in the literature
-              review. The proposal went on to win the grant.
-            </p>
-
-            <p>
-              If you'd like to work together, reach out via{" "}
+              I'm looking for a product design role where design, code and AI
+              meet. Reach out via{" "}
               <a
                 href="mailto:sanjanapendharkar01@gmail.com"
                 className="underline"
