@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import spPic from "./images/sp-pic.png";
 
 const AboutMe = () => {
@@ -35,33 +34,21 @@ const AboutMe = () => {
               prototype in Figma, and write the code myself.
             </p>
             <p>
-              I came to design through data science at&nbsp;
-              <a
-                href="https://mitre.org"
-                className="underline decoration-black"
-              >
-                MITRE
-              </a>
-              . There, I led a study helping low vision travelers navigate
-              train stations, designing the iOS app in Figma and building it in
-              Swift, with an obstacle detection model trained on 1,000+ photos I
-              collected. I also fine-tuned LLMs for a RAG pipeline, and learned
-              to keep facts in retrieval and use fine-tuning only for behavior.
+              Currently, I am back on the job market. I'm looking for a role
+              with high agency, and high impact. I'd like to work on meaningful
+              problems, and develop software that addresses the needs of
+              vulnerable, marginalized communities.
             </p>
             <p>
-              I designed and built{" "}
-              <Link to="/voice-verse" className="underline decoration-black">
-                Voice Verse
-              </Link>{" "}
-              and founded{" "}
-              <Link to="/go-sparkle" className="underline decoration-black">
-                Go Sparkle
-              </Link>
-              : AI tools for people with ADHD that ask instead of answering.
+              If there is one quality that sets me apart from most engineers,
+              it's my compassion. I strive to listen, learn and cheer on others.
+              I'm always there to help out and support anyone, especially if
+              they are eager to share their ideas.
             </p>
+
             <p>
-              I'm looking for a product design role where design, code and AI
-              meet. Reach out via{" "}
+              If you're interested in seeing how I can best support you, or want
+              to collaborate, feel free to reach out via{" "}
               <a
                 href="mailto:sanjanapendharkar01@gmail.com"
                 className="underline"
