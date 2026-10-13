@@ -235,7 +235,7 @@ const VoiceVerseMain = () => {
             <SectionHeading>User Research & Target Audience</SectionHeading>
             <p className="mb-4 leading-relaxed">
               Prior to starting the design process, it was crucial to determine
-              our specific user base. We focused on US high school students aged 14–18 with ADHD as our main group, drawing from my tutoring
+              our specific user base. We focused on US high school students aged 14-18 with ADHD as our main group, drawing from my tutoring
               experience with their challenges in English courses.
             </p>
             <p className="mb-2 leading-relaxed">
@@ -306,7 +306,7 @@ const VoiceVerseMain = () => {
               </li>
             </ul>
             <p className="mb-2 leading-relaxed">
-              I focused on five key questions through the Problem Framing Exercise:
+              I focused on 5 key questions through the Problem Framing Exercise:
             </p>
             <ul className="list-disc marker:text-vv-cyan ml-5 space-y-1 leading-relaxed">
               <li>How do ADHD-specific challenges manifest in writing tasks?</li>
