@@ -30,8 +30,11 @@ const AboutMe = () => {
           </h1>
           <div className="space-y-6">
             <p>
-              I'm Sanjana, an ambitious, driven data scientist and product
-              designer. Formerly, I was an Associate at&nbsp;
+              I'm Sanjana, an ambitious, driven and technical product designer
+              who makes Figma files come to life.
+              <br></br>
+              <br></br>
+              Formerly, I was an Associate for&nbsp;
               <a
                 href="https://mitre.org"
                 className="underline decoration-black"
