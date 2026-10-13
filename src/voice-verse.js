@@ -55,7 +55,7 @@ const decisions = [
   },
   {
     title: "One small task per screen",
-    body: "Building a thesis takes four steps, Pick a Side, Give a Reason, Name Evidence and Lock In Thesis, and each screen asks for exactly one. Teachers said this pacing is what lets students who stall after the introduction finish full essays.",
+    body: "Building a thesis takes four steps (Pick a Side, Give a Reason, Name Evidence and Lock In Thesis), and each screen asks for exactly one. Teachers said this pacing is what lets students who stall after the introduction finish full essays.",
   },
   {
     title: "Let students choose their level of support",
@@ -200,14 +200,13 @@ const VoiceVerseMain = () => {
             for neurodivergent students. One of my students continuously
             expressed how tough it was to translate his thoughts into written
             words on paper – the process of structuring them into coherent
-            sentences was a major challenge. We played around with several
-            speech to text tools, but couldn't find one that scaffolded him
+            sentences was a major challenge. We played around with several speech-to-text tools, but couldn't find one that scaffolded him
             through the essay writing process.
           </p>
           <p className="leading-relaxed">
             Realizing this was a common need for neurodivergent students,
             especially those with ADHD, I ran discovery the way I would on any
-            product: I read the research, cold emailed 50+ high school special
+            product: I read the research, cold-emailed 50+ high school special
             education teachers, and turned their feedback into a product
             requirements doc. Two of those teachers became long-term design
             partners. They reviewed both prototypes and have offered to run
@@ -236,8 +235,7 @@ const VoiceVerseMain = () => {
             <SectionHeading>User Research & Target Audience</SectionHeading>
             <p className="mb-4 leading-relaxed">
               Prior to starting the design process, it was crucial to determine
-              our specific user base. We focused on US high school students aged
-              14-18 with ADHD as our main group, drawing from my tutoring
+              our specific user base. We focused on US high school students aged 14–18 with ADHD as our main group, drawing from my tutoring
               experience with their challenges in English courses.
             </p>
             <p className="mb-2 leading-relaxed">
@@ -283,10 +281,10 @@ const VoiceVerseMain = () => {
               <TextLink href="https://itk.mitre.org/">
                 MITRE's Innovation Toolkit methodologies
               </TextLink>
-              . I started off with the Mindmapping Exercise, where I took the
+              . I started off with the Mind Mapping Exercise, where I took the
               main topic as{" "}
               <i>Conversational AI for neurodivergent communication</i>, and
-              listed out all thoughts, questions and concerns I had.
+              listed all my thoughts, questions and concerns.
             </p>
             <p className="mb-2 leading-relaxed">
               Research papers and conversations with English and special
@@ -308,7 +306,7 @@ const VoiceVerseMain = () => {
               </li>
             </ul>
             <p className="mb-2 leading-relaxed">
-              I focused on 5 key questions through the Problem Framing Exercise:
+              I focused on five key questions through the Problem Framing Exercise:
             </p>
             <ul className="list-disc marker:text-vv-cyan ml-5 space-y-1 leading-relaxed">
               <li>How do ADHD-specific challenges manifest in writing tasks?</li>
@@ -318,7 +316,7 @@ const VoiceVerseMain = () => {
               </li>
               <li>How can AI provide structure without being overly rigid?</li>
               <li>
-                How can the system support development of self-regulation
+                How can the system support the development of self-regulation
                 strategies?
               </li>
               <li>

@@ -31,7 +31,7 @@ const AboutMe = () => {
           <div className="space-y-6">
             <p>
               I'm Sanjana, an ambitious, driven data scientist and product
-              designer. Formerly, I was an Associate for&nbsp;
+              designer. Formerly, I was an Associate at&nbsp;
               <a
                 href="https://mitre.org"
                 className="underline decoration-black"
@@ -39,15 +39,13 @@ const AboutMe = () => {
                 MITRE
               </a>
               's Network Analytics Division, where I led a research study that
-              built an iOS app to help low vision individuals navigate train
+              built an iOS app to help low-vision individuals navigate train
               stations. As a part of this study, I submitted journal papers on
-              my research. During my tenure here, I also worked on fine-tuning
+              my research. During my tenure there, I also worked on fine-tuning
               LLMs to support warfighters.
             </p>
             <p>
-              Currently, I am back on the job market. I'm looking for a role
-              with high agency, and high impact. I'd like to work on meaningful
-              problems, and develop software that addresses the needs of
+              Currently, I am back on the job market. I'm looking for a role with high agency and high impact. I'd like to work on meaningful problems and develop software that addresses the needs of
               vulnerable, marginalized communities.
             </p>
             <p>

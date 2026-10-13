@@ -39,7 +39,7 @@ const screens = [
   {
     src: gsLogin,
     alt: "Go Sparkle sign-in screen with a purple octopus and a customize panel for colors and accessories",
-    caption: "Sign in and make the octopus yours: three colors, three accessories.",
+    caption: "Sign in and make the octopus yours: three colors and two accessories.",
   },
   {
     src: gsCalendar,
@@ -63,7 +63,7 @@ const screens = [
   },
   {
     src: gsGratitudeReef,
-    alt: "Gratitude reef: an underwater scene where reflections become coral and shells",
+    alt: "Gratitude Reef: an underwater scene where reflections become coral and shells",
     caption: "Gratitude Reef: friends become coral, personal wins become shells.",
   },
   {
@@ -100,7 +100,7 @@ const journeyStages = [
   },
   {
     title: "Completion",
-    body: "Our app recognizes when users are in the final stages and provides extra motivation through celebratory feedback and micro-step breakdowns. Our AI coach offers emotional support during the challenging completion phase, helping users push through the final 10-20% with encouragement and concrete next steps.",
+    body: "Our app recognizes when users are in the final stages and provides extra motivation through celebratory feedback and micro-step breakdowns. Our AI coach offers emotional support during the challenging completion phase, helping users push through the final 10–20% with encouragement and concrete next steps.",
     quote:
       "I see so many projects that are 90% done just sitting there. They get so close to the finish line and then hit this wall where it feels impossible to take those last few steps.",
   },
@@ -283,7 +283,7 @@ const SparkleMain = () => {
             <SectionHeading>User Research & Target Audience</SectionHeading>
             <p className="mb-4 leading-relaxed">
               Through discussions with the ADHD coach, we identified young
-              adults from the US (ages 18-35) with ADHD diagnoses as our target
+              adults from the US (ages 18–35) with ADHD diagnoses as our target
               user base. This tech-savvy generation faces unique challenges
               navigating major life transitions like college, careers, and
               independent living. The coach noted her clients wanted all-in-one
@@ -344,10 +344,9 @@ const SparkleMain = () => {
             <Eyebrow number="03" label="Competitive analysis" />
             <SectionHeading>Competitive Analysis & Design Approach</SectionHeading>
             <p className="mb-2 leading-relaxed">
-              I then performed a competitive analysis, by analyzing all of the
-              recommended emotional regulation and task transitioning apps
-              provided by the coach as a reference to her clients, answering the
-              following questions:
+              I then performed a competitive analysis of all the emotional
+              regulation and task transitioning apps the coach recommended to
+              her clients, answering the following questions:
             </p>
             <ul className="list-disc marker:text-gs-octo ml-5 mb-4 space-y-1 leading-relaxed">
               <li>
@@ -356,8 +355,7 @@ const SparkleMain = () => {
               </li>
               <li>
                 Can users complete tasks efficiently without unnecessary steps,
-                and can they customize their experience as per their own
-                preferences?
+                and can they customize their experience to their own preferences?
               </li>
               <li>
                 What is the quality of the help section or tutorials for users
@@ -370,7 +368,7 @@ const SparkleMain = () => {
               </li>
               <li>
                 How satisfied does the user feel after using the application?
-                Has it met their specific problem, and does it evoke positive
+                Has it solved their specific problem, and does it evoke positive
                 emotions (enjoyment / comfort)?
               </li>
             </ul>
