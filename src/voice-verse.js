@@ -77,7 +77,7 @@ const decisions = [
 
 const facts = [
   { label: "Role", value: "Sole designer & developer" },
-  { label: "Users", value: "High schoolers (14–18) with ADHD" },
+  { label: "Users", value: "High schoolers (14-18) with ADHD" },
   { label: "Partners", value: "Two special education teachers" },
   { label: "Status", value: "Preparing a beta with NJ schools" },
 ];

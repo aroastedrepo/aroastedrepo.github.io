@@ -29,7 +29,7 @@ const PROTOTYPE_EMBED_URL =
 
 const facts = [
   { label: "Role", value: "Founder & product designer" },
-  { label: "Users", value: "Adults (18–35) with ADHD" },
+  { label: "Users", value: "Adults (18-35) with ADHD" },
   { label: "Partner", value: "ADHD coach, as co-designer" },
   { label: "Focus", value: "Emotional regulation & task transitions" },
   { label: "Status", value: "Starting mobile beta" },
@@ -100,7 +100,7 @@ const journeyStages = [
   },
   {
     title: "Completion",
-    body: "Our app recognizes when users are in the final stages and provides extra motivation through celebratory feedback and micro-step breakdowns. Our AI coach offers emotional support during the challenging completion phase, helping users push through the final 10–20% with encouragement and concrete next steps.",
+    body: "Our app recognizes when users are in the final stages and provides extra motivation through celebratory feedback and micro-step breakdowns. Our AI coach offers emotional support during the challenging completion phase, helping users push through the final 10-20% with encouragement and concrete next steps.",
     quote:
       "I see so many projects that are 90% done just sitting there. They get so close to the finish line and then hit this wall where it feels impossible to take those last few steps.",
   },
@@ -283,7 +283,7 @@ const SparkleMain = () => {
             <SectionHeading>User Research & Target Audience</SectionHeading>
             <p className="mb-4 leading-relaxed">
               Through discussions with the ADHD coach, we identified young
-              adults from the US (ages 18–35) with ADHD diagnoses as our target
+              adults from the US (ages 18-35) with ADHD diagnoses as our target
               user base. This tech-savvy generation faces unique challenges
               navigating major life transitions like college, careers, and
               independent living. The coach noted her clients wanted all-in-one
