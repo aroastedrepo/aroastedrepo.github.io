@@ -36,31 +36,30 @@ const AboutMe = () => {
               discovery, prototyping in Figma, and writing the code myself.
             </p>
             <p>
-              I came to design through data science. I designed and built an
-              evaluation framework for a military operations pipeline, and used
-              geospatial libraries to pinpoint US schools struggling with
-              broadband access as the government rolled out 5G.
-            </p>
-            <p>
-              As an Associate in&nbsp;
+              I came to design through data science. As an Associate in&nbsp;
               <a
                 href="https://mitre.org"
                 className="underline decoration-black"
               >
                 MITRE
               </a>
-              's Network Analytics Division, I led a research study on helping
-              low vision travelers navigate train stations. I designed the iOS
-              app in Figma, built it in Swift, and fine-tuned a transformer in
-              PyTorch for obstacle detection, on a dataset of 1,000+ train
-              station photos I collected from scratch. Five MITRE mentors tested
-              it in the McLean metro and rated it between sub-satisfactory and
-              passable, so I'm redesigning it with multimodal models for
-              subtler cues and indoor positioning for better spatial awareness.
-              I submitted journal papers on the work.
+              's Network Analytics Division, I designed and built an evaluation
+              framework for a military operations pipeline, and used geospatial
+              libraries to pinpoint US schools struggling with broadband access
+              as the government rolled out 5G.
             </p>
             <p>
-              I also fine-tuned LLMs to improve the generation step of a RAG
+              I also led a MITRE research study on helping low vision travelers
+              navigate train stations. I designed the iOS app in Figma, built it
+              in Swift, and fine-tuned a transformer in PyTorch for obstacle
+              detection, on a dataset of 1,000+ train station photos I collected
+              from scratch. Early testing with five mentors showed it needed
+              work, so I'm redesigning it with multimodal models for subtler
+              cues and indoor positioning for better spatial awareness. I
+              submitted journal papers on the work.
+            </p>
+            <p>
+              I fine-tuned LLMs to improve the generation step of a RAG
               pipeline supporting warfighters. In 2024, we used fine-tuning to
               teach the model facts, and it overfit. That taught me to separate
               knowledge from behavior: retrieval supplies the facts, and
